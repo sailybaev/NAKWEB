@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import {Home} from './pages/Home'
 import {Aboutus} from './pages/Aboutus'
-import {Contacts} from './pages/Contacts'
 
 export function App() {
   return (

@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom'
 import {Home} from '../pages/Home'
 import {Aboutus} from '../pages/Aboutus'
-import {Services} from '../pages/Services'
-import {Contacts} from '../pages/Contacts'
+// import {Services} from '../pages/Services'
+// import {Contacts} from '../pages/Contacts'
 
 export default function AppRoutes() {
   return (
