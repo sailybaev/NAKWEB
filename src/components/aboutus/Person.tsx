@@ -10,13 +10,13 @@ interface PersonProps {
   }
   
   export function Person({
-    name = "Иван",
-    title = "основатель Celebration",
+    name = "Someone",
+    title = "CEO NAK",
     imageSrc = "https://cdn.rareblocks.xyz/collection/celebration/images/team/2/business-man.jpg",
     headline = "Генеральный директор NAK",
     description1 = "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
     description2 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    question = "Как мне сделать это без инвестиций?",
+    question = "Abzac 2",
     answer = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   }: PersonProps) {
     return (

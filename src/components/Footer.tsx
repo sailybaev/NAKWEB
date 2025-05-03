@@ -39,7 +39,7 @@ export function Footer() {
                             <Typography variant="body2">+7 777 777 77 77</Typography>
                         </Stack>
                     </Grid>
-
+                    
                     <Grid item xs={6} sm={3} md={3}>
                         <Typography variant="subtitle1" fontWeight="bold" mb={2}>
                             Ресурсы
@@ -50,7 +50,7 @@ export function Footer() {
                             <Link href="#" underline="hover" color="text.secondary">Стратегия развития</Link>
                         </Stack>
                     </Grid>
-
+                    
                     <Grid item xs={6} sm={3} md={3}>
                         <Typography variant="subtitle1" fontWeight="bold" mb={2}>
                             Компания
@@ -62,7 +62,7 @@ export function Footer() {
                             <Link href="#" underline="hover" color="text.secondary">Настройки и конфиденциальность</Link>
                         </Stack>
                     </Grid>
-
+                    
                     <Grid item xs={6} sm={3} md={3}>
                         <Typography variant="subtitle1" fontWeight="bold" mb={2}>
                             Быстрые ссылки
@@ -98,7 +98,6 @@ export function Footer() {
                         <IconButton color="inherit" size="small">
                             <YouTubeIcon fontSize="small" />
                         </IconButton>
-                        
                     </Stack>
                 </Stack>
             </Box>
