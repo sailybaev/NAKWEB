@@ -1,4 +1,5 @@
 import { FeatureItem } from "./FeatureItem";
+import { useTranslation } from 'react-i18next';
 
 interface Feature {
   icon: any;
@@ -8,6 +9,8 @@ interface Feature {
 }
 
 export function Features() {
+  const { t } = useTranslation();
+  
   const features: Feature[] = [
     {
       icon: (
@@ -26,9 +29,8 @@ export function Features() {
           />
         </svg>
       ),
-      title: "Опыт и надежность",
-      description:
-        "Более 15 лет успешной работы на строительном рынке Казахстана с безупречной репутацией и сотнями реализованных проектов.",
+      title: t('aboutus.features.experience.title'),
+      description: t('aboutus.features.experience.description'),
       iconColor: "text-green-500"
     },
     {
@@ -48,9 +50,8 @@ export function Features() {
           />
         </svg>
       ),
-      title: "Современные технологии",
-      description:
-        "Применение инновационных строительных технологий и материалов, соответствующих мировым стандартам качества и экологической безопасности.",
+      title: t('aboutus.features.technology.title'),
+      description: t('aboutus.features.technology.description'),
       iconColor: "text-blue-600"
     },
     {
@@ -70,9 +71,8 @@ export function Features() {
           />
         </svg>
       ),
-      title: "Комплексный подход",
-      description:
-        "От проектирования до ввода объектов в эксплуатацию — полный цикл работ, выполняемый квалифицированными специалистами нашей компании.",
+      title: t('aboutus.features.approach.title'),
+      description: t('aboutus.features.approach.description'),
       iconColor: "text-red-500"
     }
   ];
@@ -82,7 +82,7 @@ export function Features() {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-xl mx-auto text-center">
           <h2 className="mt-6 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
-            Наши Преимущества
+            {t('aboutus.features.title')}
           </h2>
         </div>
 
@@ -105,7 +105,7 @@ export function Features() {
             <img
               className="w-full rounded-lg shadow-xl"
               src="Halat.jpg"
-              alt="Современное здание, построенное нашей компанией"
+              alt={t('aboutus.features.buildingAlt')}
             />
           </div>
         </div>

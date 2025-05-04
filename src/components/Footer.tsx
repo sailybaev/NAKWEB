@@ -4,10 +4,12 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { Logo } from './navbar/Logo';
+import { useTranslation } from 'react-i18next';
 
 export function Footer() {
     const theme = useTheme();
-    const currentYear = new Date().getFullYear();
+    const currentYear = 2025;
+    const { t } = useTranslation();
     
     return (
         <Box
@@ -30,13 +32,12 @@ export function Footer() {
                     spacing={7}
                     sx={{ mb: 4 }}
                 >
-                    {/* Company info */}
                     <Box sx={{ width: { xs: '100%', md: '25%' } }}>
                         <Typography variant="h6" fontWeight="bold" mb={2}>
                             <Logo logo='logocolor.png'/>
                         </Typography>
                         <Typography variant="body2" color="text.secondary" mb={2}>
-                            НАК "Нұр Астана Құрылыс" — ведущая строительная компания Казахстана, <br /> специализирующаяся на возведении жилых комплексов и коммерческих объектов <br /> с инновационными архитектурными решениями.
+                            {t('footer.companyDesc')}
                         </Typography>
                         <Stack direction="row" alignItems="center" spacing={1}>
                             <PhoneIcon fontSize="small" color="primary" />
@@ -44,48 +45,44 @@ export function Footer() {
                         </Stack>
                     </Box>
                     
-                    {/* Footer columns */}
                     <Stack 
                         direction={{ xs: 'column', sm: 'row' }}
                         spacing={3}
                         justifyContent="space-between"
                         sx={{ width: { xs: '100%', md: '75%' } }}
                     >
-                        {/* Resources */}
                         <Box sx={{ width: { xs: '100%', sm: '33%' } }}>
                             <Typography variant="subtitle1" fontWeight="bold" mb={2}>
-                                Ресурсы
+                                {t('footer.resources.title')}
                             </Typography>
                             <Stack spacing={1.5}>
-                                <Link href="#" underline="hover" color="text.secondary">Наши продукты</Link>
-                                <Link href="#" underline="hover" color="text.secondary">Пользовательский опыт</Link>
-                                <Link href="#" underline="hover" color="text.secondary">Стратегия развития</Link>
+                                <Link href="#" underline="hover" color="text.secondary">{t('footer.resources.products')}</Link>
+                                <Link href="#" underline="hover" color="text.secondary">{t('footer.resources.experience')}</Link>
+                                <Link href="#" underline="hover" color="text.secondary">{t('footer.resources.strategy')}</Link>
                             </Stack>
                         </Box>
                         
-                        {/* Company */}
                         <Box sx={{ width: { xs: '100%', sm: '33%' } }}>
                             <Typography variant="subtitle1" fontWeight="bold" mb={2}>
-                                Компания
+                                {t('footer.company.title')}
                             </Typography>
                             <Stack spacing={1.5}>
-                                <Link href="#" underline="hover" color="text.secondary">О нас</Link>
-                                <Link href="#" underline="hover" color="text.secondary">Контакты и поддержка</Link>
-                                <Link href="#" underline="hover" color="text.secondary">История успеха</Link>
-                                <Link href="#" underline="hover" color="text.secondary">Настройки и конфиденциальность</Link>
+                                <Link href="/about" underline="hover" color="text.secondary">{t('footer.company.about')}</Link>
+                                <Link href="#" underline="hover" color="text.secondary">{t('footer.company.contact')}</Link>
+                                <Link href="#" underline="hover" color="text.secondary">{t('footer.company.success')}</Link>
+                                <Link href="#" underline="hover" color="text.secondary">{t('footer.company.privacy')}</Link>
                             </Stack>
                         </Box>
                         
-                        {/* Quick links */}
                         <Box sx={{ width: { xs: '100%', sm: '33%' } }}>
                             <Typography variant="subtitle1" fontWeight="bold" mb={2}>
-                                Быстрые ссылки
+                                {t('footer.links.title')}
                             </Typography>
                             <Stack spacing={1.5}>
-                                <Link href="#" underline="hover" color="text.secondary">Премиум поддержка</Link>
-                                <Link href="#" underline="hover" color="text.secondary">Наши услуги</Link>
-                                <Link href="#" underline="hover" color="text.secondary">Наша команда</Link>
-                                <Link href="#" underline="hover" color="text.secondary">Скачать приложение</Link>
+                                <Link href="#" underline="hover" color="text.secondary">{t('footer.links.premium')}</Link>
+                                <Link href="#" underline="hover" color="text.secondary">{t('footer.links.services')}</Link>
+                                <Link href="#" underline="hover" color="text.secondary">{t('footer.links.team')}</Link>
+                                <Link href="#" underline="hover" color="text.secondary">{t('footer.links.app')}</Link>
                             </Stack>
                         </Box>
                     </Stack>
@@ -100,7 +97,7 @@ export function Footer() {
                     spacing={2}
                 >
                     <Typography variant="body2" color="text.secondary">
-                        © {currentYear} НАК "Нұр Астана Құрылыс".
+                        {t('footer.rights', { year: currentYear })}
                     </Typography>
                     
                     <Stack direction="row" spacing={1}>

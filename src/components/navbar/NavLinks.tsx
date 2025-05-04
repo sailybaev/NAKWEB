@@ -1,23 +1,32 @@
 import { NavItem } from "./NavItem";
 import { DropdownNavItem } from "./DropdownNavItem";
 import { useNavigation } from "./NavContext";
+import { useTranslation } from 'react-i18next';
 
 export function NavLinks() {
   const { config } = useNavigation();
+  const { t } = useTranslation();
   
   return (
     <ul className="hidden md:flex md:space-x-8 rtl:space-x-reverse md:flex-row font-medium">
       
+      <NavItem href="/">
+        {t('navbar.home')}
+      </NavItem>
       
-      {config.mainItems
-        .filter(item => item.label !== "Байланыс")
-        .map((item, index) => (
-          <NavItem key={index} href={item.href}>
-            {item.label}
-          </NavItem>
-        ))}
-
-      <DropdownNavItem label="Тұрғын үй" />
+      <NavItem href="#">
+        {t('navbar.commerce')}
+      </NavItem>
+      
+      <NavItem href="/about">
+        {t('navbar.about')}
+      </NavItem>
+      
+      <NavItem href="#">
+        {t('navbar.campaigns')}
+      </NavItem>
+      
+      <DropdownNavItem label={t('navbar.housing')} />
     </ul>
   );
 }

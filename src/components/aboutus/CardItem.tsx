@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 interface CardItemProps {
     title: string;
     description: string;
@@ -5,6 +7,8 @@ interface CardItemProps {
 }
 
 export function CardItem({ title, description, imageUrl }: CardItemProps) {
+    const { t } = useTranslation();
+    
     return (
         <div className="card" style={{ 
             borderRadius: '12px',
@@ -58,7 +62,7 @@ export function CardItem({ title, description, imageUrl }: CardItemProps) {
                     fontSize: '0.9rem',
                     alignSelf: 'flex-start'
                 }}>
-                    Подробнее
+                    {t('aboutus.services.moreButton')}
                 </button>
             </div>
         </div>

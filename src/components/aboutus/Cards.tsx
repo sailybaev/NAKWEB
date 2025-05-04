@@ -1,29 +1,32 @@
 import { CardItem } from './CardItem';
+import { useTranslation } from 'react-i18next';
 
 export function Cards() {
+    const { t } = useTranslation();
+    
     const cardsData = [
         {
             id: 1,
-            title: "Жилищное строительство",
-            description: "Строительство современных жилых комплексов с комфортной инфраструктурой, отвечающих всем требованиям безопасности и качества.",
+            title: t('aboutus.services.housing.title'),
+            description: t('aboutus.services.housing.description'),
             imageUrl: "test.jpg",
         },
         {
             id: 2,
-            title: "Коммерческая недвижимость",
-            description: "Разработка и реализация проектов бизнес-центров, торговых комплексов и других коммерческих объектов с учетом потребностей бизнеса.",
+            title: t('aboutus.services.commercial.title'),
+            description: t('aboutus.services.commercial.description'),
             imageUrl: "test.jpg",
         },
         {
             id: 3,
-            title: "Социальные объекты",
-            description: "Строительство школ, больниц, детских садов и других социально значимых объектов, способствующих развитию городской инфраструктуры.",
+            title: t('aboutus.services.social.title'),
+            description: t('aboutus.services.social.description'),
             imageUrl: "test.jpg",
         },
         {
             id: 4,
-            title: "Инфраструктурные проекты",
-            description: "Реализация масштабных инфраструктурных проектов, включая дороги, мосты и инженерные коммуникации для создания комфортной городской среды.",
+            title: t('aboutus.services.infrastructure.title'),
+            description: t('aboutus.services.infrastructure.description'),
             imageUrl: "test.jpg",
         }
     ];
