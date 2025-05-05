@@ -1,4 +1,4 @@
-import { useNavigation } from "./NavContext";
+import { useNavigation } from "../NavContext";
 
 export function HamburgerButton() {
   const { menuOpen, toggleMainMenu } = useNavigation();

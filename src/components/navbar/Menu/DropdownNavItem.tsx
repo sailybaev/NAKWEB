@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useNavigation } from "./NavContext";
+import { useNavigation } from "../NavContext";
 
 interface DropdownNavItemProps {
   label: string;
@@ -8,7 +8,7 @@ interface DropdownNavItemProps {
 
 export function DropdownNavItem({
   label,
-  isMobile = false
+  isMobile = false,
 }: DropdownNavItemProps) {
   const dropdownRef = useRef<HTMLLIElement>(null);
   const { toggleMegaMenu, megaMenuOpen, closeMegaMenu } = useNavigation();
@@ -18,10 +18,10 @@ export function DropdownNavItem({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' || e.key === ' ') {
+    if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
       handleToggle();
-    } else if (e.key === 'Escape' && megaMenuOpen) {
+    } else if (e.key === "Escape" && megaMenuOpen) {
       closeMegaMenu();
     }
   };
@@ -47,7 +47,13 @@ export function DropdownNavItem({
           fill="none"
           viewBox="0 0 10 6"
         >
-          <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
+          <path
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="m1 1 4 4 4-4"
+          />
         </svg>
       </button>
     </li>

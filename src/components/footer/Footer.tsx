@@ -3,7 +3,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import PhoneIcon from '@mui/icons-material/Phone';
-import { Logo } from './navbar/Logo';
+import { Logo } from '../reusable/Logo';
 import { useTranslation } from 'react-i18next';
 
 export function Footer() {

@@ -1,11 +1,11 @@
-import { Logo } from "./Logo";
-import { MegaMenu } from "./MegaMenu";
+import { Logo } from "../reusable/Logo";
+import { MegaMenu } from "./Menu/MegaMenu";
 import { NavItemBold } from "./NavItemBold";
-import { HamburgerButton } from "./HamburgerButton";
-import { MobileMenu } from "./MobileMenu";
+import { HamburgerButton } from "./mobile/HamburgerButton";
+import { MobileMenu } from "./mobile/MobileMenu";
 import { NavLinks } from "./NavLinks";
 import { NavProvider, useNavigation } from "./NavContext";
-import { LanguageSwitcher } from "../LanguageSwitcher"; 
+import { LanguageSwitcher } from "../../utils/LanguageSwitcher"; 
 import { useTranslation } from 'react-i18next';
 
 function NavBarContent() {
@@ -17,8 +17,10 @@ function NavBarContent() {
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-2 ">
         <Logo logo="logo.png"/>
         
+        {/* Only Mobile version */}
         <HamburgerButton />
         
+
         <div className="hidden md:flex md:items-center md:gap-4 md:order-2">
           <LanguageSwitcher /> 
           <NavItemBold href="#">
@@ -26,6 +28,7 @@ function NavBarContent() {
           </NavItemBold>
         </div>
         
+        {/* Mobilka */}
         <MobileMenu />
         
         <div className="hidden md:flex md:w-auto md:order-1 hover:cursor-pointer "> 

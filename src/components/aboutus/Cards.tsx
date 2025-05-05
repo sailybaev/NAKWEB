@@ -1,4 +1,4 @@
-import { CardItem } from './CardItem';
+import { CardItem } from './items/CardItem';
 import { useTranslation } from 'react-i18next';
 
 export function Cards() {

@@ -1,4 +1,4 @@
-import { FeatureItem } from "./FeatureItem";
+import { FeatureItem } from "./items/FeatureItem";
 import { useTranslation } from 'react-i18next';
 
 interface Feature {

@@ -1,10 +1,10 @@
-import { NavItem } from "./NavItem";
-import { NavItemBold } from "./NavItemBold";
-import { DropdownNavItem } from "./DropdownNavItem";
-import { MegaMenu } from "./MegaMenu";
-import { useNavigation } from "./NavContext";
+import { NavItem } from "../NavItem";
+import { NavItemBold } from "../NavItemBold";
+import { DropdownNavItem } from "../Menu/DropdownNavItem";
+import { MegaMenu } from "../Menu/MegaMenu";
+import { useNavigation } from "../NavContext";
 import { useTranslation } from 'react-i18next';
-import { LanguageSwitcher } from '../LanguageSwitcher';
+import { LanguageSwitcher } from '../../../utils/LanguageSwitcher';
 
 export function MobileMenu() {
   const { menuOpen, megaMenuOpen, config } = useNavigation();

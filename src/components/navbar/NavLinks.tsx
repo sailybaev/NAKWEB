@@ -1,5 +1,5 @@
 import { NavItem } from "./NavItem";
-import { DropdownNavItem } from "./DropdownNavItem";
+import { DropdownNavItem } from "./Menu/DropdownNavItem";
 import { useNavigation } from "./NavContext";
 import { useTranslation } from 'react-i18next';
 

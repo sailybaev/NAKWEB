@@ -1,4 +1,4 @@
-import { MegaMenuItems } from "./types";
+import { MegaMenuItems } from "../types";
 import { useTranslation } from 'react-i18next';
 
 interface MegaMenuProps {
