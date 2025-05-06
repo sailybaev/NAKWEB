@@ -1,4 +1,8 @@
+import { useTranslation } from 'react-i18next';
+
 export function Overview() {
+    const { t } = useTranslation();
+    
     return (
         <div className="overview">
             <section className="hero-section" style={{
@@ -13,24 +17,24 @@ export function Overview() {
                     <div className="content-wrapper" style={{ display: 'flex', justifyContent: 'space-between' }}>
                         <div className="left-content" style={{ maxWidth: '50%' }}>
                             <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
-                                NAK  - "Nur Astana Kurylys"
+                                {t('aboutus.overview.title')}
                             </h1>
                             <p style={{ fontSize: '1rem', lineHeight: '1.6' }}>
-                                өзін қазақстандық нарықта байсалды және сенімді құрылыс салушы ретінде танытқан қарқынды дамып келе жатқан құрылыс компаниясы.
+                                {t('aboutus.overview.subtitle')}
                             </p>
                         </div>
                         <div className="stats" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                             <div className="stat-item">
-                                <div style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>17 лет</div>
-                                <div style={{ fontSize: '0.9rem', opacity: '0.8' }}>На рынке строительства</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>{t('aboutus.overview.stats.years')}</div>
+                                <div style={{ fontSize: '0.9rem', opacity: '0.8' }}>{t('aboutus.overview.stats.yearsSubtitle')}</div>
                             </div>
                             <div className="stat-item">
-                                <div style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>2 млн м²</div>
-                                <div style={{ fontSize: '0.9rem', opacity: '0.8' }}>Объем построенного жилья</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>{t('aboutus.overview.stats.volume')}</div>
+                                <div style={{ fontSize: '0.9rem', opacity: '0.8' }}>{t('aboutus.overview.stats.volumeSubtitle')}</div>
                             </div>
                             <div className="stat-item">
-                                <div style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>250 проектов</div>
-                                <div style={{ fontSize: '0.9rem', opacity: '0.8' }}>В активе компании</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>{t('aboutus.overview.stats.projects')}</div>
+                                <div style={{ fontSize: '0.9rem', opacity: '0.8' }}>{t('aboutus.overview.stats.projectsSubtitle')}</div>
                             </div>
                         </div>
                     </div>

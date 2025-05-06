@@ -1,5 +1,5 @@
 import { NavBar } from '../components/navbar/Navbar'
-import { Footer } from '../components/Footer'
+import { Footer } from '../components/footer/Footer'
 import { ReactNode } from 'react'
 import { Box } from '@mui/material'
 

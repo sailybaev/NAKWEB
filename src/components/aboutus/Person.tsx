@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 interface PersonProps {
     name?: string;
     title?: string;
@@ -19,6 +21,9 @@ interface PersonProps {
     question = "Abzac 2",
     answer = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   }: PersonProps) {
+    
+    const { t } = useTranslation();
+    
     return (
       <section className="py-10 bg-white sm:py-16 lg:py-24">
         <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
@@ -38,7 +43,7 @@ interface PersonProps {
             </div>
   
             <div>
-              <h3 className="text-lg font-semibold text-gray-900">Привет! Я {name}, {title}.</h3>
+              <h3 className="text-lg font-semibold text-gray-900"> {name}, {title}.</h3>
               <p className="mt-4 text-lg text-gray-700">{description1}</p>
               <p className="mt-4 text-lg text-gray-700">{description2}</p>
   

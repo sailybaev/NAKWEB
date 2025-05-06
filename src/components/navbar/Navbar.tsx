@@ -1,32 +1,37 @@
-import { Logo } from "./Logo";
-import { MegaMenu } from "./MegaMenu";
+import { Logo } from "../reusable/Logo";
+import { MegaMenu } from "./Menu/MegaMenu";
 import { NavItemBold } from "./NavItemBold";
-import { HamburgerButton } from "./HamburgerButton";
-import { MobileMenu } from "./MobileMenu";
+import { HamburgerButton } from "./mobile/HamburgerButton";
+import { MobileMenu } from "./mobile/MobileMenu";
 import { NavLinks } from "./NavLinks";
 import { NavProvider, useNavigation } from "./NavContext";
+import { LanguageSwitcher } from "../../utils/LanguageSwitcher"; 
+import { useTranslation } from 'react-i18next';
 
 function NavBarContent() {
   const { menuOpen, megaMenuOpen, config } = useNavigation();
+  const { t } = useTranslation();
   
-  const contactItem = config.mainItems.find(item => item.label === "Байланыс");
-
   return (
-    <nav className="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
-      <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+    <nav className="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900 ">
+      <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-2 ">
         <Logo logo="logo.png"/>
         
+        {/* Only Mobile version */}
         <HamburgerButton />
         
-        <div className="hidden md:flex md:order-2">
-          <NavItemBold href={contactItem?.href || "#"}>
-            {contactItem?.label || "Байланыс"}
+
+        <div className="hidden md:flex md:items-center md:gap-4 md:order-2">
+          <LanguageSwitcher /> 
+          <NavItemBold href="#">
+            {t('navbar.contact')}
           </NavItemBold>
         </div>
         
+        {/* Mobilka */}
         <MobileMenu />
         
-        <div className="hidden md:flex md:w-auto md:order-1">
+        <div className="hidden md:flex md:w-auto md:order-1 hover:cursor-pointer "> 
           <NavLinks />
         </div>
       </div>

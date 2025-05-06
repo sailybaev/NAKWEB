@@ -1,0 +1,102 @@
+{
+    "navbar": {
+      "home": "Home",
+      "commerce": "Commerce",
+      "about": "About Us",
+      "campaigns": "Campaigns",
+      "contact": "Contact",
+      "housing": "Housing"
+    },
+    "housing": {
+      "newHousing": "New Housing",
+      "secondaryMarket": "Secondary Market",
+      "privateHouses": "Private Houses",
+      "landPlots": "Land Plots",
+      "mortgage": "Mortgage",
+      "domesticProjects": "Domestic Projects",
+      "newHousingDesc": "Apartments in newly built residential complexes",
+      "secondaryMarketDesc": "Used apartments and houses",
+      "privateHousesDesc": "Private houses in Astana city",
+      "landPlotsDesc": "Land for construction and agricultural land",
+      "mortgageDesc": "Offers under mortgage programs",
+      "domesticProjectsDesc": "Residential complexes built with state support"
+    },
+    "aboutus": {
+      "pageTitle": "About Us",
+      "overview": {
+        "title": "NAK - \"Nur Astana Kurylys\"",
+        "subtitle": "a dynamically developing construction company that has established itself as a solid and reliable builder in the Kazakhstan market.",
+        "stats": {
+          "years": "17 years",
+          "yearsSubtitle": "In the construction market",
+          "volume": "2 million m²",
+          "volumeSubtitle": "Volume of built housing",
+          "projects": "250 projects",
+          "projectsSubtitle": "In company's assets"
+        }
+      },
+      "about": {
+        "title": "About Us",
+        "description": "\"Nur Astana Kurylys\" is a multi-profile holding whose scope of activity includes not only housing construction, but also management of its own production base, construction of facilities in HoReCa sector, tender projects, building business centers, as well as rental of commercial and office premises"
+      },
+      "features": {
+        "title": "Our Advantages",
+        "experience": {
+          "title": "Experience and reliability",
+          "description": "More than 15 years of successful work in the construction market of Kazakhstan with an impeccable reputation and hundreds of implemented projects."
+        },
+        "technology": {
+          "title": "Modern technologies",
+          "description": "Application of innovative construction technologies and materials that meet world quality standards and environmental safety."
+        },
+        "approach": {
+          "title": "Comprehensive approach",
+          "description": "From design to commissioning — a full cycle of work performed by qualified specialists of our company."
+        },
+        "buildingAlt": "Modern building constructed by our company"
+      },
+      "services": {
+        "housing": {
+          "title": "Housing construction",
+          "description": "Construction of modern residential complexes with comfortable infrastructure that meet all safety and quality requirements."
+        },
+        "commercial": {
+          "title": "Commercial real estate",
+          "description": "Development and implementation of business centers, shopping complexes and other commercial facilities taking into account the needs of businesses."
+        },
+        "social": {
+          "title": "Social facilities",
+          "description": "Construction of schools, hospitals, kindergartens and other socially significant facilities contributing to urban infrastructure development."
+        },
+        "infrastructure": {
+          "title": "Infrastructure projects",
+          "description": "Implementation of large-scale infrastructure projects, including roads, bridges and engineering communications to create a comfortable urban environment."
+        },
+        "moreButton": "Learn more"
+      }
+    },
+    "footer": {
+      "companyDesc": "NAK \"Nur Astana Kurylys\" — a leading construction company in Kazakhstan specializing in the construction of residential complexes and commercial properties with innovative architectural solutions.",
+      "resources": {
+        "title": "Resources",
+        "products": "Our products",
+        "experience": "User experience",
+        "strategy": "Development strategy"
+      },
+      "company": {
+        "title": "Company",
+        "about": "About us",
+        "contact": "Contact and support",
+        "success": "Success story",
+        "privacy": "Settings and privacy"
+      },
+      "links": {
+        "title": "Quick links",
+        "premium": "Premium support",
+        "services": "Our services",
+        "team": "Our team",
+        "app": "Download app"
+      },
+      "rights": "© 2025 NAK \"Nur Astana Kurylys\"."
+    }
+  }

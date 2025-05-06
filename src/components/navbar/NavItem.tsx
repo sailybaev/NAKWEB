@@ -7,7 +7,7 @@ interface NavItemProps {
 }
 
 export function NavItem({ href, children, isMobile = false }: NavItemProps) {
-  const baseClasses = "block py-2 px-3 rounded-sm hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white";
+  const baseClasses = "block py-2 px-3 rounded-sm hover:bg-gray-100 dark:text-white  dark:hover:text-white";
   
   const mobileClasses = baseClasses;
   

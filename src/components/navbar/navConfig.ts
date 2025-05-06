@@ -4,7 +4,7 @@ export const navConfig: NavConfig = {
   mainItems: [
     { label: "Басты бет", href: "/" },
     { label: "Коммерция", href: "#" },
-    { label: "Біз Туралы", href: "#" },
+    { label: "Біз Туралы", href: "/about" },
     { label: "Науқандар", href: "#" },
     { label: "Байланыс", href: "#" },
   ],
