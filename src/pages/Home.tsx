@@ -9,6 +9,7 @@ import { Navigation, Pagination, Scrollbar, A11y , Autoplay } from 'swiper/modul
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { Projects } from "../components/home/Projects";
 
 
 export function Home() {
@@ -17,10 +18,13 @@ export function Home() {
       <div className="container mx-auto px-10 py-8">
         <div className="h-screen">
           
-          <div className="md:col-span-2">
+          <div className="md:col-span-2 mb-4">
             <Slider />
           </div>
             
+          <div className="md:col-span-2 py-4">
+            <Projects />
+          </div>
         </div>
       </div>
     </MainLayout>

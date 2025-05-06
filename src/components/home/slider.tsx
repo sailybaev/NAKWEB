@@ -4,9 +4,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import { Navigation, Pagination } from 'swiper/modules';
-import { useRef } from 'react';
 import {Autoplay} from 'swiper/modules';
-import { Logo } from '../reusable/Logo';
 
 const slides = [
   {
@@ -50,11 +48,6 @@ export function Slider() {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <div className="relative">
-       
-              <div className="absolute left-6 top-6 z-10">
-                <img src="logo.png" alt="Logo" style={{width:100}} />
-              </div>
-              
               <img
                 src={slide.image}
                 alt={slide.title}
@@ -62,23 +55,35 @@ export function Slider() {
                 style={{ height: '500px' }}
               />
               
-              <div className="absolute left-0 bottom-0 w-full p-10 bg-gradient-to-t from-black/70 to-transparent">
-                <div className="flex flex-col gap-4">
-                  <h2 className="text-4xl font-light text-white mb-2 font-script">{slide.title}</h2>
-                  
-                  <div className="bg-white text-teal-800 inline-block px-3 py-2 mb-1 max-w-max" style={{ borderRadius: '7px'  }}>
-                    <p className="text-xl font-bold" >{slide.subtitle}</p>
-                  </div>
-                  
-                  <p className="text-sm text-white/80">{slide.description}</p>
+              <div className="absolute inset-0 flex flex-col justify-between p-8 bg-gradient-to-t from-black/70 to-transparent ">
+                
+                <div className="self-start">
+                  <img src="logo.png" alt="Logo" style={{width:100 , opacity: 0.4}} />
                 </div>
+                
+                <div className="w-full">
+                  <div className="flex flex-col gap-4">
+                    <div>
+                      <h2 className="text-4xl font-light text-white mb-2 font-script">{slide.title}</h2>
+                    </div>
+                    
+                    <div className="bg-white text-teal-800 inline-block px-3 py-2 mb-1 max-w-max" style={{ borderRadius: '7px'  }}>
+                      <p className="text-xl font-bold" >{slide.subtitle}</p>
+                    </div>
+                    
+                    <p className="text-sm text-white/80">{slide.description}</p>
+
+                    
+                  </div>
+                </div>
+
               </div>
+              
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
       
-      <div className="custom-pagination flex justify-center mt-4"></div>
     </div>
   );
 }
