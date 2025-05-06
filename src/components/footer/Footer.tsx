@@ -17,8 +17,7 @@ export function Footer() {
             sx={{
                 py: 5,
                 px: 0,
-                mt: 'auto',
-                backgroundColor: theme.palette.mode === 'light' 
+                backgroundColor: theme.palette.mode === 'light'
                     ? theme.palette.background.paper 
                     : theme.palette.background.default,
                 position: 'static',

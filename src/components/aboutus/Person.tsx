@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
 interface PersonProps {
     name?: string;
@@ -22,7 +22,7 @@ interface PersonProps {
     answer = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   }: PersonProps) {
     
-    const { t } = useTranslation();
+    // const { t } = useTranslation();
     
     return (
       <section className="py-10 bg-white sm:py-16 lg:py-24">

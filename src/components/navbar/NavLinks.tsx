@@ -1,10 +1,10 @@
 import { NavItem } from "./NavItem";
 import { DropdownNavItem } from "./Menu/DropdownNavItem";
-import { useNavigation } from "./NavContext";
+// import { useNavigation } from "./NavContext";
 import { useTranslation } from 'react-i18next';
 
 export function NavLinks() {
-  const { config } = useNavigation();
+  // const { config } = useNavigation();
   const { t } = useTranslation();
   
   return (
