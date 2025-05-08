@@ -14,7 +14,7 @@ export function NavLinks() {
         {t('navbar.home')}
       </NavItem>
       
-      <NavItem href="#">
+      <NavItem href="/commerce">
         {t('navbar.commerce')}
       </NavItem>
       

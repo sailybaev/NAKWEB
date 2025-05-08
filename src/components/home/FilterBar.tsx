@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Dropdown } from '../ui/Dropdown';
 import { OptionList } from '../ui/OptionList';
 import { PriceRange } from '../ui/PriceRange';
+import { useTranslation } from 'react-i18next';
 
 interface FilterBarProps {
   buildingType: string;
@@ -11,15 +12,25 @@ interface FilterBarProps {
 }
 
 export function FilterBar({ buildingType, setBuildingType, propertyType, setPropertyType }: FilterBarProps) {
-
+  const { t } = useTranslation();
   const [buildingTypeDropdown, setBuildingTypeDropdown] = useState(false);
   const [propertyTypeDropdown, setPropertyTypeDropdown] = useState(false);
   const [priceDropdown, setPriceDropdown] = useState(false);
   const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
 
-  const buildingTypes = ['Все проекты', 'Строющиеся', 'Готовые'];
-  const propertyTypes = [ 'Все','Квартира', 'Коммерческая недвижимость', 'Паркинг'];
+  const buildingTypes = [
+    t('home.projects.filters.allProjects'), 
+    t('home.projects.filters.underConstruction'), 
+    t('home.projects.filters.completed')
+  ];
+  
+  const propertyTypes = [
+    t('home.projects.filters.all'),
+    t('home.projects.filters.apartment'), 
+    t('home.projects.filters.commercial'), 
+    t('home.projects.filters.parking')
+  ];
 
   const closeAllDropdowns = (except: string) => {
     if (except !== 'buildingType') setBuildingTypeDropdown(false);
@@ -46,8 +57,8 @@ export function FilterBar({ buildingType, setBuildingType, propertyType, setProp
   };
 
   const resetFilters = () => {
-    setBuildingType('Все проекты');
-    setPropertyType('Все');
+    setBuildingType(t('home.projects.filters.allProjects'));
+    setPropertyType(t('home.projects.filters.all'));
     setMinPrice('');
     setMaxPrice('');
   };
@@ -92,7 +103,7 @@ export function FilterBar({ buildingType, setBuildingType, propertyType, setProp
           <Dropdown
               isOpen={priceDropdown}
               toggle={handlePriceToggle}
-              label="Цена"
+              label={t('home.projects.filters.price')}
               active={priceDropdown}
               variant="secondary"
           >
@@ -109,7 +120,7 @@ export function FilterBar({ buildingType, setBuildingType, propertyType, setProp
               className="text-gray-500 py-2 px-4 hover:text-gray-700"
               onClick={resetFilters}
           >
-            Сбросить
+            {t('home.projects.filters.reset')}
           </button>
         </div>
       </div>

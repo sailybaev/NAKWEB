@@ -1,39 +1,39 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/swiper-bundle.css';
-
-
 import { Navigation, Pagination } from 'swiper/modules';
-import {Autoplay} from 'swiper/modules';
-
-const slides = [
-  {
-    image: '/Halat.jpg',
-    title: 'Лёгкая рассрочка',
-    subtitle: 'от 150 000 ₸/мес',
-    description: 'до ввода в эксплуатацию'
-  },
-  {
-    image: '/Hero.jpg',
-    title: 'Удобное расположение',
-    subtitle: 'в центре города',
-    description: 'рядом со всей инфраструктурой'
-  },
-  {
-    image: '/Halat.jpg',
-    title: 'Современный дизайн',
-    subtitle: 'европейского уровня',
-    description: 'функциональные планировки'
-  },
-  {
-    image: '/Hero.jpg',
-    title: 'Качественное строительство',
-    subtitle: 'надежные материалы',
-    description: 'проверенный застройщик'
-  },
-];
+import { Autoplay } from 'swiper/modules';
+import { useTranslation } from 'react-i18next';
 
 export function Slider() {
+  const { t } = useTranslation();
+  
+  const slides = [
+    {
+      image: '/Halat.jpg',
+      title: t('home.slider.installment'),
+      subtitle: t('home.slider.installmentSub'),
+      description: t('home.slider.installmentDesc')
+    },
+    {
+      image: '/Hero.jpg',
+      title: t('home.slider.location'),
+      subtitle: t('home.slider.locationSub'),
+      description: t('home.slider.locationDesc')
+    },
+    {
+      image: '/Halat.jpg',
+      title: t('home.slider.design'),
+      subtitle: t('home.slider.designSub'),
+      description: t('home.slider.designDesc')
+    },
+    {
+      image: '/Hero.jpg',
+      title: t('home.slider.quality'),
+      subtitle: t('home.slider.qualitySub'),
+      description: t('home.slider.qualityDesc')
+    },
+  ];
+
   return (
     <div className="w-full relative">
       <Swiper
@@ -72,18 +72,13 @@ export function Slider() {
                     </div>
                     
                     <p className="text-sm text-white/80">{slide.description}</p>
-
-                    
                   </div>
                 </div>
-
               </div>
-              
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-      
     </div>
   );
 }

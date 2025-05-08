@@ -2,15 +2,17 @@ import { useState } from 'react';
 import { FilterBar } from './FilterBar';
 import { Card } from './Card';
 import { cardData } from '../home/cardInfo.ts';
+import { useTranslation } from 'react-i18next';
 
 export function Projects() {
-    const [buildingType, setBuildingType] = useState('Все проекты');
-    const [propertyType, setPropertyType] = useState('Все');
+    const { t } = useTranslation();
+    const [buildingType, setBuildingType] = useState(t('home.projects.filters.allProjects'));
+    const [propertyType, setPropertyType] = useState(t('home.projects.filters.all'));
     const [visibleCount, setVisibleCount] = useState(3);
 
     const filteredProjects = cardData.filter(project => {
-        const buildingTypeMatch = buildingType === 'Все проекты' || project.buildingType === buildingType;
-        const propertyTypeMatch = propertyType === 'Все' || project.propertyType === propertyType;
+        const buildingTypeMatch = buildingType === t('home.projects.filters.allProjects') || project.buildingType === buildingType;
+        const propertyTypeMatch = propertyType === t('home.projects.filters.all') || project.propertyType === propertyType;
 
         return buildingTypeMatch && propertyTypeMatch;
     });
@@ -24,7 +26,7 @@ export function Projects() {
 
     return(
         <section className="container mx-auto py-8">
-            <h1 className="text-4xl font-bold mb-8">Проекты NAK</h1>
+            <h1 className="text-4xl font-bold mb-8">{t('home.projects.title')}</h1>
 
             <FilterBar
                 buildingType={buildingType}
@@ -48,11 +50,12 @@ export function Projects() {
                                 roomrange={project.roomrange}
                                 area={project.area}
                                 amount={project.amount}
+                                href={project.href}
                             />
                         ))
                     ) : (
                         <p className="col-span-3 text-center text-gray-500 py-8">
-                            Нет проектов, соответствующих выбранным фильтрам
+                            {t('home.projects.noProjects')}
                         </p>
                     )}
                 </div>
@@ -63,7 +66,7 @@ export function Projects() {
                             onClick={handleLoadMore}
                             className="bg-blue-600 text-white py-2 px-6 rounded-md hover:bg-blue-700 transition-colors"
                         >
-                            Загрузить еще
+                            {t('home.projects.loadMore')}
                         </button>
                     </div>
                 )}

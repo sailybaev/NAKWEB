@@ -1,5 +1,6 @@
 import { useEffect, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
+import { useTranslation } from 'react-i18next';
 
 interface ProductCard {
     id: number;
@@ -9,12 +10,11 @@ interface ProductCard {
 }
 
 export function Carousel() {
+    const { t } = useTranslation();
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'start' });
 
     useEffect(() => {
         if (!emblaApi) return;
-
-
     }, [emblaApi]);
 
     const onNextButtonClick = useCallback(() => {
@@ -24,7 +24,7 @@ export function Carousel() {
     return (
         <section className="py-12 px-4">
             <div className="container mx-auto">
-                <h2 className="text-3xl font-bold mb-8">Новости</h2>
+                <h2 className="text-3xl font-bold mb-8">{t('home.news.title')}</h2>
 
                 <div className="relative">
                     <div className="overflow-hidden" ref={emblaRef}>
@@ -48,7 +48,7 @@ export function Carousel() {
                                                 {product.description}
                                             </p>
                                             <button className="text-blue-950 font-medium flex items-center">
-                                                Подробнее
+                                                {t('home.news.readMore')}
                                                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                                                 </svg>
@@ -60,13 +60,12 @@ export function Carousel() {
                         </div>
                     </div>
 
-
                     <button
-                        className="absolute top-1/2 -right-4 z-10 bg-white rounded-full shadow-md p-2 transform -translate-y-1/2"
+                        className="absolute top-1/2 -right-4 z-10 bg-gray-900 rounded-full shadow-md p-2 transform -translate-y-1/2"
                         onClick={onNextButtonClick}
                         aria-label="Next slide"
                     >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" color='white'>
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </button>
@@ -75,6 +74,7 @@ export function Carousel() {
         </section>
     );
 }
+
 const products: ProductCard[] = [
     {
         id: 1,

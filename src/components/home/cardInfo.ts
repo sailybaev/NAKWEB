@@ -11,22 +11,24 @@ export interface CardInfo {
     amount: number;
     buildingType: string;
     propertyType: string;
+    href?: string;
 }
 
 export const cardData: CardInfo[] = [
     {
         id: 1,
-        title: "Tomiris Towers",
+        title: "Triumph Exclusive",
         imageUrl: "Hero.jpg",
         category: "Элитный",
-        address: "Алматы, ул. Достык 123",
-        price: "от 350 000 ₸/м²",
-        date: "Сдача: 4 кв. 2023",
+        address: "Мангылык ел",
+        price: "от 772 000 ₸/м²",
+        date: "Сдача: 3 кв. 2024",
         roomrange: "1-4",
         area: "45-120 м²",
         amount: 24,
         buildingType: "Строющиеся",
-        propertyType: "Квартира"
+        propertyType: "Квартира",
+        href: "https://triumph-exclusive.kz/"
     },
     {
         id: 2,
