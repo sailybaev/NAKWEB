@@ -18,7 +18,7 @@ export const cardData: CardInfo[] = [
     {
         id: 1,
         title: "Triumph Exclusive",
-        imageUrl: "Hero.jpg",
+        imageUrl: "triumph.jpg",
         category: "Элитный",
         address: "Мангылык ел",
         price: "от 772 000 ₸/м²",
@@ -33,7 +33,7 @@ export const cardData: CardInfo[] = [
     {
         id: 2,
         title: "Dariya",
-        imageUrl: "Hero.jpg",
+        imageUrl: "Dariya.jpg",
         category: "Комфорт",
         address: "Алматы, ул. Абая 45",
         price: "от 280 000 ₸/м²",
@@ -47,7 +47,7 @@ export const cardData: CardInfo[] = [
     {
         id: 3,
         title: "Arai Towers",
-        imageUrl: "Hero.jpg",
+        imageUrl: "Arai.png",
         category: "Бизнес",
         address: "Алматы, пр. Аль-Фараби 78",
         price: "от 320 000 ₸/м²",
@@ -56,12 +56,13 @@ export const cardData: CardInfo[] = [
         area: "60-150 м²",
         amount: 18,
         buildingType: "Готовые",
-        propertyType: "Квартира"
+        propertyType: "Квартира",
+        href: "https://araitowers.nak.kz"
     },
     {
         id: 4,
-        title: "Triumph Exclusive",
-        imageUrl: "Hero.jpg",
+        title: "Ecopark",
+        imageUrl: "6.jpg",
         category: "Премиум",
         address: "Алматы, ул. Сатпаева 22",
         price: "от 400 000 ₸/м²",
@@ -70,12 +71,13 @@ export const cardData: CardInfo[] = [
         area: "70-200 м²",
         amount: 12,
         buildingType: "Строющиеся",
-        propertyType: "Квартира"
+        propertyType: "Квартира",
+        href: "https://ecopark.nak.kz"
     },
     {
         id: 5,
         title: "Royal Expo",
-        imageUrl: "Hero.jpg",
+        imageUrl: "Royal.jpg",
         category: "Бизнес",
         address: "Алматы, пр. Жибек Жолы 54",
         price: "от 450 000 ₸/м²",
@@ -84,12 +86,13 @@ export const cardData: CardInfo[] = [
         area: "50-120 м²",
         amount: 30,
         buildingType: "Готовые",
-        propertyType: "Коммерческая недвижимость"
+        propertyType: "Коммерческая недвижимость",
+        href: "https://royalexpo.nak.kz"
     },
     {
         id: 6,
         title: "Hazar",
-        imageUrl: "Hero.jpg",
+        imageUrl: "hazar.jpg",
         category: "Комфорт",
         address: "Алматы, ул. Тимирязева 15",
         price: "от 290 000 ₸/м²",
@@ -102,22 +105,23 @@ export const cardData: CardInfo[] = [
     },
     {
         id: 1,
-        title: "Tomiris Towers",
-        imageUrl: "Hero.jpg",
+        title: "Triumph Exclusive",
+        imageUrl: "triumph.jpg",
         category: "Элитный",
-        address: "Алматы, ул. Достык 123",
-        price: "от 350 000 ₸/м²",
-        date: "Сдача: 4 кв. 2023",
+        address: "Мангылык ел",
+        price: "от 772 000 ₸/м²",
+        date: "Сдача: 3 кв. 2024",
         roomrange: "1-4",
         area: "45-120 м²",
         amount: 24,
         buildingType: "Строющиеся",
-        propertyType: "Квартира"
+        propertyType: "Квартира",
+        href: "https://triumph-exclusive.kz/"
     },
     {
         id: 2,
         title: "Dariya",
-        imageUrl: "Hero.jpg",
+        imageUrl: "Dariya.jpg",
         category: "Комфорт",
         address: "Алматы, ул. Абая 45",
         price: "от 280 000 ₸/м²",
@@ -131,7 +135,7 @@ export const cardData: CardInfo[] = [
     {
         id: 3,
         title: "Arai Towers",
-        imageUrl: "Hero.jpg",
+        imageUrl: "Arai.png",
         category: "Бизнес",
         address: "Алматы, пр. Аль-Фараби 78",
         price: "от 320 000 ₸/м²",
@@ -140,12 +144,13 @@ export const cardData: CardInfo[] = [
         area: "60-150 м²",
         amount: 18,
         buildingType: "Готовые",
-        propertyType: "Квартира"
+        propertyType: "Квартира",
+        href: "https://araitowers.nak.kz"
     },
     {
         id: 4,
-        title: "Triumph Exclusive",
-        imageUrl: "Hero.jpg",
+        title: "Ecopark",
+        imageUrl: "6.jpg",
         category: "Премиум",
         address: "Алматы, ул. Сатпаева 22",
         price: "от 400 000 ₸/м²",
@@ -154,12 +159,13 @@ export const cardData: CardInfo[] = [
         area: "70-200 м²",
         amount: 12,
         buildingType: "Строющиеся",
-        propertyType: "Квартира"
+        propertyType: "Квартира",
+        href: "https://ecopark.nak.kz"
     },
     {
         id: 5,
         title: "Royal Expo",
-        imageUrl: "Hero.jpg",
+        imageUrl: "Royal.jpg",
         category: "Бизнес",
         address: "Алматы, пр. Жибек Жолы 54",
         price: "от 450 000 ₸/м²",
@@ -168,12 +174,13 @@ export const cardData: CardInfo[] = [
         area: "50-120 м²",
         amount: 30,
         buildingType: "Готовые",
-        propertyType: "Коммерческая недвижимость"
+        propertyType: "Коммерческая недвижимость",
+        href: "https://royalexpo.nak.kz"
     },
     {
         id: 6,
         title: "Hazar",
-        imageUrl: "Hero.jpg",
+        imageUrl: "hazar.jpg",
         category: "Комфорт",
         address: "Алматы, ул. Тимирязева 15",
         price: "от 290 000 ₸/м²",
@@ -184,4 +191,5 @@ export const cardData: CardInfo[] = [
         buildingType: "Строющиеся",
         propertyType: "Квартира"
     },
+
 ];
