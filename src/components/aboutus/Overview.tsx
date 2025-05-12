@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-
+import CountUp from '../animations/CountUp'
 export function Overview() {
     const { t } = useTranslation();
     
@@ -25,15 +25,45 @@ export function Overview() {
                         </div>
                         <div className="stats" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                             <div className="stat-item">
-                                <div style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>{t('aboutus.overview.stats.years')}</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>
+                                    <CountUp
+                                        from={0}
+                                        to={17}
+                                        separator=","
+                                        direction="up"
+                                        duration={1}
+                                        className="count-up-text"
+                                    />
+                                    {t('aboutus.overview.stats.years')}
+                                </div>
                                 <div style={{ fontSize: '0.9rem', opacity: '0.8' }}>{t('aboutus.overview.stats.yearsSubtitle')}</div>
                             </div>
                             <div className="stat-item">
-                                <div style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>{t('aboutus.overview.stats.volume')}</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>
+                                    <CountUp
+                                        from={0}
+                                        to={2}
+                                        separator=","
+                                        direction="up"
+                                        duration={1}
+                                        className="count-up-text"
+                                    />
+                                    {t('aboutus.overview.stats.volume')}
+                                </div>
                                 <div style={{ fontSize: '0.9rem', opacity: '0.8' }}>{t('aboutus.overview.stats.volumeSubtitle')}</div>
                             </div>
                             <div className="stat-item">
-                                <div style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>{t('aboutus.overview.stats.projects')}</div>
+                                <div style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>
+                                    <CountUp
+                                        from={0}
+                                        to={250}
+                                        separator=","
+                                        direction="up"
+                                        duration={1}
+                                        className="count-up-text"
+                                    />
+                                    {t('aboutus.overview.stats.projects')}
+                                </div>
                                 <div style={{ fontSize: '0.9rem', opacity: '0.8' }}>{t('aboutus.overview.stats.projectsSubtitle')}</div>
                             </div>
                         </div>
