@@ -1,7 +1,7 @@
 import { createContext, useState, useContext, ReactNode } from 'react';
 import { NavConfig } from './types';
 import { navConfig } from './navConfig';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
 interface NavContextType {
   menuOpen: boolean;

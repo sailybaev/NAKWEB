@@ -7,7 +7,7 @@ interface MegaMenuProps {
   isMobile?: boolean;
 }
 
-export function MegaMenu({ isOpen, items, isMobile = false }: MegaMenuProps) {
+export function MegaMenu({ isOpen, isMobile = false }: MegaMenuProps) {
   const { t } = useTranslation();
 
   if (!isOpen) return null;
