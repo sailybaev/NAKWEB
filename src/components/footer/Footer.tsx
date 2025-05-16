@@ -31,7 +31,7 @@ export function Footer() {
                 >
                     <Box sx={{ width: { xs: '100%', md: '25%' } }}>
                         <Typography variant="h6" fontWeight="bold" mb={2}>
-                            <Logo logo='logo.png'/>
+                            <Logo logo='/logo.png'/>
                         </Typography>
                         <Typography variant="body2" color="rgba(255,255,255,0.7)" mb={2}>
                             {t('footer.companyDesc')}

@@ -9,7 +9,7 @@ export function OverviewSection({ complex }: OverviewSectionProps) {
     const { t } = useTranslation();
 
     return (
-        <section id="overview" className="p-24 px-4">
+        <section id="overview" className="py-12 px-4">
             <div className="container mx-auto">
                 <div className="flex flex-col lg:flex-row gap-16 p-16">
                     <div className="w-full lg:w-2/3">

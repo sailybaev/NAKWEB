@@ -15,7 +15,7 @@ function NavBarContent() {
   return (
     <nav className="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900 ">
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-2 ">
-        <Logo logo="logo.png"/>
+        <Logo logo="/logo.png"/>
         
         {/* Only Mobile version */}
         <HamburgerButton />
