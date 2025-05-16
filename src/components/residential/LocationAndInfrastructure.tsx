@@ -5,6 +5,8 @@ interface LocationAndInfrastructureProps {
 }
 
 export function LocationAndInfrastructure({ complex }: LocationAndInfrastructureProps) {
+    const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+    
     return (
         <section className="p-16 px-4 bg-white">
             <div className="container mx-auto">
@@ -12,15 +14,21 @@ export function LocationAndInfrastructure({ complex }: LocationAndInfrastructure
                 <div className="flex flex-col lg:flex-row gap-10 p-16">
                     <div className="w-full lg:w-1/2">
                         <div className="rounded-xl overflow-hidden shadow-lg h-[400px] bg-gray-200">
-                            <iframe
-                                src={`https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=${encodeURIComponent(complex.address)}`}
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                allowFullScreen
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                            ></iframe>
+                            {apiKey ? (
+                                <iframe
+                                    src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${encodeURIComponent(complex.address)}`}
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0 }}
+                                    allowFullScreen
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
+                            ) : (
+                                <div className="flex items-center justify-center h-full">
+                                    <p className="text-red-500">Google Maps API key is not configured</p>
+                                </div>
+                            )}
                         </div>
                     </div>
                     <div className="w-full lg:w-1/2">
