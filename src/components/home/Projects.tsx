@@ -1,18 +1,76 @@
 import { useState } from 'react';
 import { FilterBar } from './FilterBar';
 import { Card } from './Card';
-import { cardData } from '../home/cardInfo.ts';
+import { residentialComplexes } from '../residential/residentialConfig';
 import { useTranslation } from 'react-i18next';
+
+const FILTER_KEYS = {
+  ALL_PROJECTS: 'all',
+  UNDER_CONSTRUCTION: 'underConstruction',
+  COMPLETED: 'completed',
+  ALL_TYPES: 'all',
+  APARTMENT: 'apartment',
+  COMMERCIAL: 'commercial',
+  PARKING: 'parking'
+};
 
 export function Projects() {
     const { t } = useTranslation();
-    const [buildingType, setBuildingType] = useState(t('home.projects.filters.allProjects'));
-    const [propertyType, setPropertyType] = useState(t('home.projects.filters.all'));
+    const [buildingTypeKey, setBuildingTypeKey] = useState(FILTER_KEYS.ALL_PROJECTS);
+    const [propertyTypeKey, setPropertyTypeKey] = useState(FILTER_KEYS.ALL_TYPES);
     const [visibleCount, setVisibleCount] = useState(3);
 
-    const filteredProjects = cardData.filter(project => {
-        const buildingTypeMatch = buildingType === t('home.projects.filters.allProjects') || project.buildingType === buildingType;
-        const propertyTypeMatch = propertyType === t('home.projects.filters.all') || project.propertyType === propertyType;
+    const getTranslatedFilter = (key:any) => {
+        switch(key) {
+            case FILTER_KEYS.ALL_PROJECTS: return t('home.projects.filters.allProjects');
+            case FILTER_KEYS.UNDER_CONSTRUCTION: return t('home.projects.filters.underConstruction');
+            case FILTER_KEYS.COMPLETED: return t('home.projects.filters.completed');
+            case FILTER_KEYS.ALL_TYPES: return t('home.projects.filters.all');
+            case FILTER_KEYS.APARTMENT: return t('home.projects.filters.apartment');
+            case FILTER_KEYS.COMMERCIAL: return t('home.projects.filters.commercial');
+            case FILTER_KEYS.PARKING: return t('home.projects.filters.parking');
+            default: return '';
+        }
+    };
+
+    const handleBuildingTypeChange = (translatedValue:any) => {
+        if (translatedValue === t('home.projects.filters.allProjects')) {
+            setBuildingTypeKey(FILTER_KEYS.ALL_PROJECTS);
+        } else if (translatedValue === t('home.projects.filters.underConstruction')) {
+            setBuildingTypeKey(FILTER_KEYS.UNDER_CONSTRUCTION);
+        } else if (translatedValue === t('home.projects.filters.completed')) {
+            setBuildingTypeKey(FILTER_KEYS.COMPLETED);
+        }
+    };
+
+    const handlePropertyTypeChange = (translatedValue:any) => {
+        if (translatedValue === t('home.projects.filters.all')) {
+            setPropertyTypeKey(FILTER_KEYS.ALL_TYPES);
+        } else if (translatedValue === t('home.projects.filters.apartment')) {
+            setPropertyTypeKey(FILTER_KEYS.APARTMENT);
+        } else if (translatedValue === t('home.projects.filters.commercial')) {
+            setPropertyTypeKey(FILTER_KEYS.COMMERCIAL);
+        } else if (translatedValue === t('home.projects.filters.parking')) {
+            setPropertyTypeKey(FILTER_KEYS.PARKING);
+        }
+    };
+
+    const filteredProjects = residentialComplexes.filter(complex => {
+        const buildingTypeMatch = buildingTypeKey === FILTER_KEYS.ALL_PROJECTS || 
+            (complex.status === FILTER_KEYS.UNDER_CONSTRUCTION && buildingTypeKey === FILTER_KEYS.UNDER_CONSTRUCTION) || 
+            (complex.status === FILTER_KEYS.COMPLETED && buildingTypeKey === FILTER_KEYS.COMPLETED);
+            
+        const propertyTypeMatch = propertyTypeKey === FILTER_KEYS.ALL_TYPES || 
+            complex.apartments.some(apt => {
+                if (propertyTypeKey === FILTER_KEYS.APARTMENT) {
+                    return apt.type.includes('комнатная') || apt.type === 'Квартиры';
+                } else if (propertyTypeKey === FILTER_KEYS.COMMERCIAL) {
+                    return apt.type.toLowerCase().includes('коммерческая');
+                } else if (propertyTypeKey === FILTER_KEYS.PARKING) {
+                    return apt.type.toLowerCase().includes('паркинг');
+                }
+                return false;
+            });
 
         return buildingTypeMatch && propertyTypeMatch;
     });
@@ -29,28 +87,28 @@ export function Projects() {
             <h1 className="text-4xl font-bold mb-8">{t('home.projects.title')}</h1>
 
             <FilterBar
-                buildingType={buildingType}
-                setBuildingType={setBuildingType}
-                propertyType={propertyType}
-                setPropertyType={setPropertyType}
+                buildingType={getTranslatedFilter(buildingTypeKey)}
+                setBuildingType={handleBuildingTypeChange}
+                propertyType={getTranslatedFilter(propertyTypeKey)}
+                setPropertyType={handlePropertyTypeChange}
             />
 
             <div className="cardsContainer mt-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {visibleProjects.length > 0 ? (
-                        visibleProjects.map((project) => (
+                        visibleProjects.map((complex) => (
                             <Card
-                                key={project.id}
-                                title={project.title}
-                                imageUrl={project.imageUrl}
-                                category={project.category}
-                                address={project.address}
-                                price={project.price}
-                                date={project.date}
-                                roomrange={project.roomrange}
-                                area={project.area}
-                                amount={project.amount}
-                                href={project.href}
+                                key={complex.id}
+                                title={complex.name}
+                                imageUrl={complex.imageUrl}
+                                category={complex.class}
+                                address={complex.address}
+                                price={complex.minPrice}
+                                date={complex.completionDate}
+                                roomrange={complex.apartments[0]?.rooms ? `${complex.apartments[0].rooms}` : "1-4"}
+                                area={complex.apartments[0]?.area || ""}
+                                amount={complex.apartments.length}
+                                href={`/residential/${complex.id}`}
                             />
                         ))
                     ) : (

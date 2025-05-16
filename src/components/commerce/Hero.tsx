@@ -5,7 +5,7 @@ export function Hero() {
     
     return (
         <section
-            className="relative py-24 text-white"
+            className="relative p-16 py-24 text-white"
             style={{
                 backgroundImage: 'url("/BGI.jpg")',
                 backgroundSize: 'cover',

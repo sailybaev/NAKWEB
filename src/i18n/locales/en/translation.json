@@ -19,7 +19,11 @@
     "privateHousesDesc": "Private houses in Astana city",
     "landPlotsDesc": "Land for construction and agricultural land",
     "mortgageDesc": "Mortgage program offerings",
-    "domesticProjectsDesc": "Residential complexes built with state support"
+    "domesticProjectsDesc": "Residential complexes built with state support",
+    "projectLocations": "Project Locations",
+    "projectMapPlaceholder": "Interactive map with project locations",
+    "recentProjects": "Recent Projects",
+    "fromPrice": "From {{price}} ₸"
   },
   "home": {
     "slider": {
@@ -159,5 +163,87 @@
       "app": "Download App"
     },
     "rights": "© 2025 NAK \"Nur Astana Kurylys\". All rights reserved."
+  },
+  "residential": {
+    "hero": {
+      "viewApartments": "View Apartments",
+      "contact": "Contact Us",
+      "scrollDown": "Scroll Down"
+    },
+    "about": {
+      "title": "About Complex"
+    },
+    "location": {
+      "title": "Location",
+      "address": "Address",
+      "nearbyFacilities": "Nearby Facilities",
+      "mapPlaceholder": "Map is loading..."
+    },
+    "apartments": {
+      "title": "Apartments",
+      "area": "Area",
+      "price": "Price",
+      "rooms": "Rooms",
+      "status": "Status",
+      "available": "Available",
+      "sold": "Sold Out",
+      "notAvailable": "Not Available",
+      "details": "View Details",
+      "inquire": "Inquire Now",
+      "close": "Close"
+    },
+    "gallery": {
+      "title": "Gallery",
+      "allCategories": "All",
+      "categories": {
+        "exterior": "Exterior",
+        "interior": "Interior",
+        "amenities": "Amenities"
+      }
+    },
+    "amenities": {
+      "title": "Amenities"
+    },
+    "construction": {
+      "title": "Construction Status",
+      "completionDate": "Completion Date",
+      "currentStage": "Current Stage",
+      "progress": "Construction Progress",
+      "status": {
+        "planned": "Planned",
+        "in-progress": "In Progress",
+        "completed": "Completed"
+      }
+    },
+    "developer": {
+      "title": "Developer"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "getInTouch": "Get in Touch",
+      "phone": "Phone",
+      "email": "Email",
+      "salesOffice": "Sales Office",
+      "inquiryForm": "Inquiry Form",
+      "formSuccess": "Thank you for your interest in {complex}! Our sales team will contact you shortly.",
+      "form": {
+        "name": "Your Name",
+        "phone": "Phone Number",
+        "email": "Email Address",
+        "message": "Your Message",
+        "submit": "Send Inquiry",
+        "submitting": "Sending..."
+      }
+    },
+    "notFound": {
+      "title": "Residential Complex Not Found",
+      "description": "The residential complex you're looking for doesn't exist or has been removed.",
+      "backHome": "Back to Home"
+    },
+    "apartmentPlans": {
+      "title": "Apartment Floor Plans",
+      "inquire": "Request Information"
+    }
+    
   }
 }
