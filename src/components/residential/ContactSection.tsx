@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { ResidentialComplex } from './residentialConfig';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
 interface ContactSectionProps {
   complex: ResidentialComplex;
 }
 
 export function ContactSection({ complex }: ContactSectionProps) {
-  const { t } = useTranslation();
+  //const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
