@@ -9,7 +9,7 @@ export function HeroSection({ complex }: HeroSectionProps) {
     const { t } = useTranslation();
     
     return (
-        <section className="relative h-[85vh] bg-gray-900">
+        <section className="relative h-[95vh] bg-gray-900">
             <div 
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ 
