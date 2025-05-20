@@ -207,24 +207,3 @@ export function FilterBar({
   );
 }
 
-function filterByPrice(complex: any, minPrice: string, maxPrice: string): boolean {
-    if (!minPrice && !maxPrice) return true;
-    
-    const minPriceNum = minPrice ? parseInt(minPrice.replace(/\s/g, '')) : 0;
-    const maxPriceNum = maxPrice ? parseInt(maxPrice.replace(/\s/g, '')) : Infinity;
-    
-    const complexMinPrice = complex.minPriceNumeric;
-    
-    const apartmentMinPrices = complex.apartments.map((apt: any) => apt.pricePerSqmNumeric);
-    
-    const lowestPrice = Math.min(complexMinPrice, ...apartmentMinPrices.filter((p: any) => p > 0));
-    
-    console.log('Complex:', complex.name);
-    console.log('Min price:', minPriceNum, 'Max price:', maxPriceNum);
-    console.log('Complex min price:', complexMinPrice);
-    console.log('Apartment prices:', apartmentMinPrices);
-    console.log('Lowest price:', lowestPrice);
-    console.log('Match?', lowestPrice >= minPriceNum && lowestPrice <= maxPriceNum);
-    
-    return lowestPrice >= minPriceNum && lowestPrice <= maxPriceNum;
-}

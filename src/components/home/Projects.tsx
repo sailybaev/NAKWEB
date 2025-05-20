@@ -157,8 +157,7 @@ export function Projects() {
             }
             return false;
         });
-        const classMatch = classTypeKey === FILTER_KEYS.ALL_CLASSES || 
-            complex.class === classTypeKey;
+        
         const priceMatch = filterByPrice(complex, minPrice, maxPrice);
         const inStockMatch = !inStockOnly || complex.apartments.some(apt => apt.available !== false);
         
