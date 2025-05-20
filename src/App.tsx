@@ -6,7 +6,6 @@ import {Commerce} from "./pages/Commerce.tsx";
 import {ResidentialComplex} from "./pages/ResidentialComplex.tsx";
 import { Campaigns } from './pages/Campaigns.tsx';
 import { Contacts } from './pages/Contacts';
-import AdminPanel from './components/admin/AdminPanel';
 
 export function App() {
   return (
@@ -17,7 +16,6 @@ export function App() {
       <Route path="/campaigns" element={<Campaigns/>} />
       <Route path="/contacts" element={<Contacts/>} />
       <Route path="/residential/:complexId" element={<ResidentialComplex/>} />
-      <Route path="/admin" element={<AdminPanel />} />
       <Route path="*" element={<div>404 Not Found</div>} />
     </Routes>
   )
