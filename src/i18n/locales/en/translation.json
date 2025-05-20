@@ -216,6 +216,7 @@
       "title": "Apartments",
       "area": "Area",
       "price": "Price",
+      "pricePerSqm": "Price per m²",
       "rooms": "Rooms",
       "status": "Status",
       "available": "Available",
@@ -223,7 +224,13 @@
       "notAvailable": "Not Available",
       "details": "View Details",
       "inquire": "Inquire Now",
-      "close": "Close"
+      "close": "Close",
+      "allTypes": "All Types",
+      "1room": "1 Room",
+      "2room": "2 Rooms",
+      "3room": "3 Rooms",
+      "4room": "4 Rooms",
+      "contact": "Contact Us"
     },
     "gallery": {
       "title": "Gallery",
