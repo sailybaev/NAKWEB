@@ -15,6 +15,7 @@ export interface ResidentialComplex {
   finishType: string;
   imageUrl: string;
   minPrice: string;
+  minPriceNumeric: number; 
   elevator: string;
   windows: string;
   heating: string;
@@ -34,6 +35,7 @@ export interface Apartment {
   area: string;
   price: string;
   pricePerSqm: string;
+  pricePerSqmNumeric: number; // Add numeric price field
   available: boolean;
   floorPlan?: string;
 }
@@ -56,6 +58,7 @@ export const residentialComplexes: ResidentialComplex[] = [
     finishType: "улучшенная черновая",
     imageUrl: "/Dariya.jpg",
     minPrice: "от 425 000 ₸/м²",
+    minPriceNumeric: 425000,
     elevator: "В подъезде 1 лифт",
     windows: "увеличенные",
     heating: "центральное",
@@ -70,7 +73,8 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "45-55 м²",
         price: "от 23 625 000 ₸",
         pricePerSqm: "от 525 000 до 550 000 ₸/м²",
-        available: true,
+        pricePerSqmNumeric: 537500,
+        available: false, 
         floorPlan: "/floorplans/daryia-1br.jpg"
       },
       {
@@ -80,7 +84,8 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "65-80 м²",
         price: "от 28 275 000 ₸",
         pricePerSqm: "от 435 000 до 500 000 ₸/м²",
-        available: true,
+        pricePerSqmNumeric: 467500,
+        available: false,
         floorPlan: "/floorplans/daryia-2br.jpg"
       },
       {
@@ -90,7 +95,8 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "85-110 м²",
         price: "от 36 125 000 ₸",
         pricePerSqm: "от 425 000 до 470 000 ₸/м²",
-        available: true,
+        pricePerSqmNumeric: 447500,
+        available: false,
         floorPlan: "/floorplans/daryia-3br.jpg"
       },
       {
@@ -100,7 +106,8 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "120-140 м²",
         price: "от 55 800 000 ₸",
         pricePerSqm: "от 465 000 до 490 000 ₸/м²",
-        available: true,
+        pricePerSqmNumeric: 477500,
+        available: false,
         floorPlan: "/floorplans/daryia-4br.jpg"
       }
     ]
@@ -122,6 +129,7 @@ export const residentialComplexes: ResidentialComplex[] = [
     finishType: "черновая",
     imageUrl: "/Ansau.jpg",
     minPrice: "от 340 000 ₸/м²",
+    minPriceNumeric: 340000,
     elevator: "В 1 подъезде 1 лифт, современный, высокоскоростной бесшумный",
     windows: "Алюмениевые конструкции, 5ти камерные, окна со сложным открыванием, 210х180см (увеличенные)",
     heating: "центральное, радиаторы биметаллические",
@@ -136,6 +144,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "40-55 м²",
         price: "от 16 800 000 ₸",
         pricePerSqm: "от 420 000 до 425 000 ₸/м²",
+        pricePerSqmNumeric: 422500,
         available: true,
         floorPlan: "/floorplans/ansau-1br.jpg"
       },
@@ -146,6 +155,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "60-75 м²",
         price: "от 20 400 000 ₸",
         pricePerSqm: "от 340 000 до 375 000 ₸/м²",
+        pricePerSqmNumeric: 357500,
         available: true,
         floorPlan: "/floorplans/ansau-2br.jpg"
       },
@@ -156,7 +166,8 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "85-100 м²",
         price: "от 28 900 000 ₸",
         pricePerSqm: "от 340 000 до 370 000 ₸/м²",
-        available: true,
+        pricePerSqmNumeric: 355000,
+        available: false, // Changed to false
         floorPlan: "/floorplans/ansau-3br.jpg"
       },
       {
@@ -166,6 +177,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "110-130 м²",
         price: "от 42 900 000 ₸",
         pricePerSqm: "390 000 ₸/м²",
+        pricePerSqmNumeric: 390000,
         available: true,
         floorPlan: "/floorplans/ansau-4br.jpg"
       }
@@ -188,6 +200,7 @@ export const residentialComplexes: ResidentialComplex[] = [
     finishType: "предчистая",
     imageUrl: "/6.jpg",
     minPrice: "от 543 000 ₸/м²",
+    minPriceNumeric: 543000,
     presentation: "https://clck.ru/35Rxeh",
     video: "https://youtu.be/otQaga_6hTA",
     tour3d: "https://clck.ru/35uKLH/",
@@ -204,6 +217,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "40-55 м²",
         price: "от 22 680 000 ₸",
         pricePerSqm: "от 567 000 до 626 000 ₸/м²",
+        pricePerSqmNumeric: 596500,
         available: true,
         floorPlan: "/floorplans/ecopark-1br.jpg"
       },
@@ -214,6 +228,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "60-75 м²",
         price: "от 32 580 000 ₸",
         pricePerSqm: "от 543 000 до 600 000 ₸/м²",
+        pricePerSqmNumeric: 571500,
         available: true,
         floorPlan: "/floorplans/ecopark-2br.jpg"
       },
@@ -224,6 +239,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "85-100 м²",
         price: "от 47 260 000 ₸",
         pricePerSqm: "от 556 000 до 562 000 ₸/м²",
+        pricePerSqmNumeric: 559000,
         available: true,
         floorPlan: "/floorplans/ecopark-3br.jpg"
       },
@@ -234,7 +250,8 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "120 м²",
         price: "от 69 240 000 ₸",
         pricePerSqm: "577 000 ₸/м²",
-        available: true,
+        pricePerSqmNumeric: 577000,
+        available: false, // Changed to false
         floorPlan: "/floorplans/ecopark-4br.jpg"
       }
     ]
@@ -256,6 +273,7 @@ export const residentialComplexes: ResidentialComplex[] = [
     finishType: "предчистая",
     imageUrl: "/Arai.png",
     minPrice: "от 505 000 ₸/м²",
+    minPriceNumeric: 505000,
     presentation: "https://clck.ru/35bkeo",
     tour3d: "https://clck.ru/35uJyu",
     elevator: "Блок А и Б - 4 лифта, Блок В, Г и Д - 3 лифта",
@@ -271,6 +289,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "40-50 м²",
         price: "от 22 000 000 ₸",
         pricePerSqm: "от 550 000 до 630 000 ₸/м²",
+        pricePerSqmNumeric: 590000,
         available: true,
         floorPlan: "/floorplans/arai-1br.jpg"
       },
@@ -281,6 +300,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "60-70 м²",
         price: "от 33 600 000 ₸",
         pricePerSqm: "от 560 000 до 610 000 ₸/м²",
+        pricePerSqmNumeric: 585000,
         available: true,
         floorPlan: "/floorplans/arai-2br.jpg"
       },
@@ -291,6 +311,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "80-95 м²",
         price: "от 40 400 000 ₸",
         pricePerSqm: "от 505 000 до 630 000 ₸/м²",
+        pricePerSqmNumeric: 567500,
         available: true,
         floorPlan: "/floorplans/arai-3br.jpg"
       },
@@ -301,6 +322,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "110-120 м²",
         price: "от 66 550 000 ₸",
         pricePerSqm: "605 000 ₸/м²",
+        pricePerSqmNumeric: 605000,
         available: true,
         floorPlan: "/floorplans/arai-4br.jpg"
       }
@@ -323,6 +345,7 @@ export const residentialComplexes: ResidentialComplex[] = [
     finishType: "предчистая",
     imageUrl: "/Royal.jpg",
     minPrice: "от 670 000 ₸/м²",
+    minPriceNumeric: 670000,
     presentation: "https://clck.ru/35Rxpo",
     tour3d: "https://clck.ru/35uKQc",
     promoAction: "скидки на квартиры до 12% на паркинг 20%",
@@ -339,6 +362,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "75-85 м²",
         price: "от 51 750 000 ₸",
         pricePerSqm: "690 000 ₸/м²",
+        pricePerSqmNumeric: 690000,
         available: true,
         floorPlan: "/floorplans/royal-2br.jpg"
       },
@@ -349,6 +373,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "95-120 м²",
         price: "от 63 650 000 ₸",
         pricePerSqm: "от 670 000 до 690 000 ₸/м²",
+        pricePerSqmNumeric: 680000,
         available: true,
         floorPlan: "/floorplans/royal-3br.jpg"
       }
@@ -371,6 +396,7 @@ export const residentialComplexes: ResidentialComplex[] = [
     finishType: "предчистовая",
     imageUrl: "/Asylym.png",
     minPrice: "от 498 000 ₸/м²",
+    minPriceNumeric: 498000,
     presentation: "https://clck.ru/38URFq",
     tour3d: "https://clck.ru/35uKRF",
     promoAction: "скидки на квартиры до 6% на паркинг 14% и кладовки до 30%",
@@ -387,6 +413,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "различные площади",
         price: "от 498 000 ₸/м²",
         pricePerSqm: "от 498 000 ₸/м²",
+        pricePerSqmNumeric: 498000,
         available: true,
         floorPlan: "/floorplans/asylym-plan.jpg"
       }
@@ -409,6 +436,7 @@ export const residentialComplexes: ResidentialComplex[] = [
     finishType: "предчистая",
     imageUrl: "/hazar.jpg",
     minPrice: "от 400 000 ₸/м²",
+    minPriceNumeric: 400000,
     presentation: "https://clck.ru/3AZCwr",
     tour3d: "https://clck.ru/35uJyu",
     promoAction: "скидки на квартиры до 10%",
@@ -425,6 +453,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "80-90 м²",
         price: "от 32 000 000 ₸",
         pricePerSqm: "400 000 ₸/м²",
+        pricePerSqmNumeric: 400000,
         available: true,
         floorPlan: "/floorplans/hazar-3br.jpg"
       }
@@ -447,6 +476,7 @@ export const residentialComplexes: ResidentialComplex[] = [
     finishType: "предчистая",
     imageUrl: "/tomiris.png",
     minPrice: "от 390 000 ₸/м²",
+    minPriceNumeric: 390000,
     presentation: "https://clck.ru/35RxXr",
     promoAction: "скидки на квартиры до 3%",
     elevator: "",
@@ -462,6 +492,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "различные площади",
         price: "от 390 000 ₸/м²",
         pricePerSqm: "от 390 000 ₸/м²",
+        pricePerSqmNumeric: 390000,
         available: true,
         floorPlan: "/floorplans/tomiris-plan.jpg"
       }
@@ -484,6 +515,7 @@ export const residentialComplexes: ResidentialComplex[] = [
     finishType: "предчистовая",
     imageUrl: "/asylym2.png",
     minPrice: "от 515 000 ₸/м²",
+    minPriceNumeric: 515000,
     presentation: "https://clck.ru/35Rx5a",
     tour3d: "https://clck.ru/35uKRF",
     promoAction: "скидки на квартиры до 5% на паркинг 14% и кладовки до 33%",
@@ -500,6 +532,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "различные площади",
         price: "от 515 000 ₸/м²",
         pricePerSqm: "от 515 000 ₸/м²",
+        pricePerSqmNumeric: 515000,
         available: true,
         floorPlan: "/floorplans/asylym-main-plan.jpg"
       }
@@ -522,6 +555,7 @@ export const residentialComplexes: ResidentialComplex[] = [
     finishType: "предчистая",
     imageUrl: "/aulet.jpg",
     minPrice: "от 380 000 ₸/м²",
+    minPriceNumeric: 380000,
     presentation: "https://clck.ru/35Ryp8",
     promoAction: "скидки на квартиры до 5% на паркинг15%",
     elevator: "",
@@ -537,6 +571,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "80-95 м²",
         price: "от 30 400 000 ₸",
         pricePerSqm: "от 380 000 ₸/м²",
+        pricePerSqmNumeric: 387500,
         available: true,
         floorPlan: "/floorplans/aulyet-3br.jpg"
       }
@@ -559,6 +594,7 @@ export const residentialComplexes: ResidentialComplex[] = [
     finishType: "предчистовая",
     imageUrl: "/asyltau.png",
     minPrice: "от 460 000 ₸/м²",
+    minPriceNumeric: 460000,
     tour3d: "https://clck.ru/3AHS53",
     presentation: "https://clck.ru/3ABo4V",
     elevator: "",
@@ -574,6 +610,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "различные площади",
         price: "от 460 000 ₸/м²",
         pricePerSqm: "от 460 000 ₸/м²",
+        pricePerSqmNumeric: 460000,
         available: true,
         floorPlan: "/floorplans/asyltau-plan.jpg"
       }
@@ -596,6 +633,7 @@ export const residentialComplexes: ResidentialComplex[] = [
     finishType: "предчистовая",
     imageUrl: "/triumph.jpg",
     minPrice: "от 772 000 ₸/м²",
+    minPriceNumeric: 772000,
     presentation: "https://clck.ru/39NR4c",
     tour3d: "https://clck.ru/39794C",
     video: "https://youtu.be/2Piu7Xbqb4Q",
@@ -612,6 +650,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "100-120 м²",
         price: "от 77 200 000 ₸",
         pricePerSqm: "от 772 000 до 782 000 ₸/м²",
+        pricePerSqmNumeric: 777000,
         available: true,
         floorPlan: "/floorplans/triumph-3br.jpg"
       },
@@ -622,6 +661,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "130-150 м²",
         price: "от 100 360 000 ₸",
         pricePerSqm: "от 772 000 до 782 000 ₸/м²",
+        pricePerSqmNumeric: 777000,
         available: true,
         floorPlan: "/floorplans/triumph-4br.jpg"
       }
@@ -644,6 +684,7 @@ export const residentialComplexes: ResidentialComplex[] = [
     finishType: "предчистовая",
     imageUrl: "/tomiris.png",
     minPrice: "от 420 000 ₸/м²",
+    minPriceNumeric: 420000,
     presentation: "https://clck.ru/35RxXr",
     elevator: "",
     windows: "высота окон 2,0 м",
@@ -658,6 +699,7 @@ export const residentialComplexes: ResidentialComplex[] = [
         area: "различные площади",
         price: "от 420 000 ₸/м²",
         pricePerSqm: "от 420 000 ₸/м²",
+        pricePerSqmNumeric: 420000,
         available: true,
         floorPlan: "/floorplans/tomiris-main-plan.jpg"
       }

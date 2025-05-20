@@ -22,7 +22,7 @@ export function NavLinks() {
         {t('navbar.about')}
       </NavItem>
       
-      <NavItem href="#">
+      <NavItem href="/campaigns">
         {t('navbar.campaigns')}
       </NavItem>
       

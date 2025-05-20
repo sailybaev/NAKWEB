@@ -23,7 +23,7 @@ export function OverviewSection({ complex }: OverviewSectionProps) {
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                             {[
                                 { label: "Класс дома", value: complex.class },
-                                { label: "Количество блоков", value: complex.blocks },
+                                { label: "Количество подъездов", value: complex.blocks },
                                 { label: "Этажность", value: complex.floors },
                                 { label: "Квартир на площадке", value: complex.unitsPerFloor },
                                 { label: "Высота потолков", value: `${complex.ceilingHeight} метра` },

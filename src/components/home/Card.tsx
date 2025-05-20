@@ -4,16 +4,29 @@ interface CardProps {
     title: string;
     imageUrl: string;
     category: string;
+    categoryColor?: string; 
     address: string;
     price: string;
     date: string;
     roomrange: string;
     area: string;
     amount: number;
-    href?: string;
+    href: string;
 }
 
-export function Card({ title, imageUrl, category, address, price, date, roomrange, area, amount, href, }: CardProps) {
+export function Card({ 
+    title, 
+    imageUrl, 
+    category, 
+    categoryColor = 'bg-blue-600',
+    address, 
+    price, 
+    date, 
+    roomrange, 
+    area, 
+    amount, 
+    href 
+}: CardProps) {
 
     const navigate = useNavigate();
 
@@ -35,7 +48,7 @@ export function Card({ title, imageUrl, category, address, price, date, roomrang
         >
             <div className="relative">
                 <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
-                <span className="absolute top-3 left-3 bg-blue-500 text-white px-2 py-1 rounded text-xs">
+                <span className={`absolute top-3 left-3 ${categoryColor} text-white px-2 py-1 rounded text-xs`}>
                     {category}
                 </span>
             </div>

@@ -3,21 +3,42 @@ import { Dropdown } from '../ui/Dropdown';
 import { OptionList } from '../ui/OptionList';
 import { PriceRange } from '../ui/PriceRange';
 import { useTranslation } from 'react-i18next';
+import { Tooltip } from '../ui/Tooltip';
 
 interface FilterBarProps {
   buildingType: string;
   setBuildingType: (type: string) => void;
   propertyType: string;
   setPropertyType: (type: string) => void;
+  minPrice: string;
+  maxPrice: string;
+  setMinPrice: (value: string) => void;
+  setMaxPrice: (value: string) => void;
+  inStockOnly: boolean;
+  setInStockOnly: (value: boolean) => void;
+  classType: string;            
+  setClassType: (type: string) => void;  
 }
 
-export function FilterBar({ buildingType, setBuildingType, propertyType, setPropertyType }: FilterBarProps) {
+export function FilterBar({ 
+  buildingType, 
+  setBuildingType, 
+  propertyType, 
+  setPropertyType,
+  minPrice,
+  maxPrice,
+  setMinPrice,
+  setMaxPrice,
+  inStockOnly,
+  setInStockOnly,
+  classType,          
+  setClassType          
+}: FilterBarProps) {
   const { t } = useTranslation();
   const [buildingTypeDropdown, setBuildingTypeDropdown] = useState(false);
   const [propertyTypeDropdown, setPropertyTypeDropdown] = useState(false);
   const [priceDropdown, setPriceDropdown] = useState(false);
-  const [minPrice, setMinPrice] = useState('');
-  const [maxPrice, setMaxPrice] = useState('');
+  const [classDropdown, setClassDropdown] = useState(false);  
 
   const buildingTypes = [
     t('home.projects.filters.allProjects'), 
@@ -32,10 +53,20 @@ export function FilterBar({ buildingType, setBuildingType, propertyType, setProp
     t('home.projects.filters.parking')
   ];
 
+  const classTypes = [
+    t('home.projects.filters.allClasses'),
+    t('home.projects.filters.economy'), 
+    t('home.projects.filters.comfort'), 
+    t('home.projects.filters.business'),
+    t('home.projects.filters.premium'),
+    t('home.projects.filters.comfortPlus'),
+  ];
+
   const closeAllDropdowns = (except: string) => {
     if (except !== 'buildingType') setBuildingTypeDropdown(false);
     if (except !== 'propertyType') setPropertyTypeDropdown(false);
     if (except !== 'price') setPriceDropdown(false);
+    if (except !== 'class') setClassDropdown(false); 
   };
 
   const handleBuildingTypeToggle = (e: React.MouseEvent) => {
@@ -56,11 +87,19 @@ export function FilterBar({ buildingType, setBuildingType, propertyType, setProp
     closeAllDropdowns('price');
   };
 
+  const handleClassToggle = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setClassDropdown(!classDropdown);
+    closeAllDropdowns('class');
+  };
+
   const resetFilters = () => {
     setBuildingType(t('home.projects.filters.allProjects'));
     setPropertyType(t('home.projects.filters.all'));
     setMinPrice('');
     setMaxPrice('');
+    setInStockOnly(false);
+    setClassType(t('home.projects.filters.allClasses'));
   };
 
   return (
@@ -116,6 +155,47 @@ export function FilterBar({ buildingType, setBuildingType, propertyType, setProp
             />
           </Dropdown>
 
+          <Dropdown
+              isOpen={classDropdown}
+              toggle={handleClassToggle}
+              label={classType}
+              active={classDropdown}
+              variant="primary"
+          >
+            <OptionList
+                options={classTypes}
+                selectedValue={classType}
+                onSelect={(value) => {
+                  setClassType(value);
+                  setClassDropdown(false);
+                }}
+            />
+          </Dropdown>
+
+          <div className="flex items-center" data-filter-key="in-stock-container">
+            <Tooltip content={t('home.projects.filters.inStockTooltip')}>
+              <label className="inline-flex items-center cursor-pointer group">
+                <div className="relative">
+                  <input
+                    type="checkbox"
+                    className="sr-only"
+                    checked={inStockOnly}
+                    onChange={(e) => setInStockOnly(e.target.checked)}
+                    data-testid="in-stock-toggle"
+                  />
+                  <div className={`w-12 h-6 rounded-full transition-colors duration-300 ease-in-out flex items-center px-1 ${inStockOnly ? 'bg-blue-600' : 'bg-gray-300'}`}>
+                    <div 
+                      className={`w-4 h-4 rounded-full bg-white shadow-md transform transition-transform duration-300 ease-in-out ${inStockOnly ? 'translate-x-6' : 'translate-x-0'}`}
+                    ></div>
+                  </div>
+                </div>
+                <span className="ml-3 text-sm font-medium text-gray-700 group-hover:text-blue-600 transition-colors duration-200">
+                  {t('home.projects.filters.inStock')}
+                </span>
+              </label>
+            </Tooltip>
+          </div>
+
           <button
               className="text-gray-500 py-2 px-4 hover:text-gray-700"
               onClick={resetFilters}
@@ -125,4 +205,26 @@ export function FilterBar({ buildingType, setBuildingType, propertyType, setProp
         </div>
       </div>
   );
+}
+
+function filterByPrice(complex: any, minPrice: string, maxPrice: string): boolean {
+    if (!minPrice && !maxPrice) return true;
+    
+    const minPriceNum = minPrice ? parseInt(minPrice.replace(/\s/g, '')) : 0;
+    const maxPriceNum = maxPrice ? parseInt(maxPrice.replace(/\s/g, '')) : Infinity;
+    
+    const complexMinPrice = complex.minPriceNumeric;
+    
+    const apartmentMinPrices = complex.apartments.map((apt: any) => apt.pricePerSqmNumeric);
+    
+    const lowestPrice = Math.min(complexMinPrice, ...apartmentMinPrices.filter((p: any) => p > 0));
+    
+    console.log('Complex:', complex.name);
+    console.log('Min price:', minPriceNum, 'Max price:', maxPriceNum);
+    console.log('Complex min price:', complexMinPrice);
+    console.log('Apartment prices:', apartmentMinPrices);
+    console.log('Lowest price:', lowestPrice);
+    console.log('Match?', lowestPrice >= minPriceNum && lowestPrice <= maxPriceNum);
+    
+    return lowestPrice >= minPriceNum && lowestPrice <= maxPriceNum;
 }

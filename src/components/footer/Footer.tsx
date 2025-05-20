@@ -1,8 +1,9 @@
 import { Box, Typography, Link, Stack, Divider, IconButton } from '@mui/material';
-import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import PhoneIcon from '@mui/icons-material/Phone';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+import MusicNoteIcon from '@mui/icons-material/MusicNote'; 
 import { Logo } from '../reusable/Logo';
 import { useTranslation } from 'react-i18next';
 
@@ -16,7 +17,7 @@ export function Footer() {
             sx={{
                 py: 5,
                 px: 0,
-                backgroundColor: '#111827', // Tailwind's gray-900 equivalent
+                backgroundColor: '#111827', 
                 color: '#ffffff',
                 position: 'static',
                 bottom: 0,
@@ -98,14 +99,45 @@ export function Footer() {
                     </Typography>
 
                     <Stack direction="row" spacing={1}>
-                        <IconButton sx={{ color: 'rgba(255,255,255,0.7)' }} size="small">
-                            <FacebookIcon fontSize="small" />
-                        </IconButton>
-                        <IconButton sx={{ color: 'rgba(255,255,255,0.7)' }} size="small">
+                        <IconButton 
+                            component="a"
+                            href="https://www.instagram.com/nak.holding/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            sx={{ color: 'rgba(255,255,255,0.7)' }} 
+                            size="small"
+                        >
                             <InstagramIcon fontSize="small" />
                         </IconButton>
-                        <IconButton sx={{ color: 'rgba(255,255,255,0.7)' }} size="small">
+                        <IconButton 
+                            component="a"
+                            href="https://www.threads.com/@nak.holding"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            sx={{ color: 'rgba(255,255,255,0.7)' }} 
+                            size="small"
+                        >
+                            <AlternateEmailIcon fontSize="small" /> 
+                        </IconButton>
+                        <IconButton 
+                            component="a"
+                            href="https://www.youtube.com/@nurastanakurylys2571"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            sx={{ color: 'rgba(255,255,255,0.7)' }} 
+                            size="small"
+                        >
                             <YouTubeIcon fontSize="small" />
+                        </IconButton>
+                        <IconButton 
+                            component="a"
+                            href="https://www.tiktok.com/@nur.astana.kurylys"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            sx={{ color: 'rgba(255,255,255,0.7)' }} 
+                            size="small"
+                        >
+                            <MusicNoteIcon fontSize="small" /> 
                         </IconButton>
                     </Stack>
                 </Stack>

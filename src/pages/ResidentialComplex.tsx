@@ -46,26 +46,20 @@ export function ResidentialComplex() {
 
     return (
         <MainLayout>
-            {/* Hero Section */}
             <HeroSection complex={complex} />
             
-            {/* Overview Section */}
             <OverviewSection complex={complex} />
             
-            {/* Features Section */}
             <FeaturesSection complex={complex} />
             
-            {/* Apartment Plans Section */}
             <section id="apartment-plans" className="py-20 px-4 bg-white">
                 <div className="container mx-auto">
                     <ApartmentSlider apartments={complex.apartments} />
                 </div>
             </section>
             
-            {/* Location and Infrastructure Section */}
             <LocationAndInfrastructure complex={complex} />
 
-            {/* Contact Section */}
             <section id="contact" className="py-20 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Связаться с нами</h2>

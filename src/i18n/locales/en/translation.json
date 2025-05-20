@@ -53,7 +53,16 @@
         "commercial": "Commercial property",
         "parking": "Parking",
         "price": "Price",
-        "reset": "Reset"
+        "reset": "Reset",
+        "inStock": "Available Now",
+        "inStockTooltip": "Show only apartments that are currently available",
+        "allClasses": "All Classes",
+        "economy": "Economy Class",
+        "comfort": "Comfort Class",
+        "comfortPlus": "Comfort+ Class",
+        "business": "Business Class",
+        "premium": "Premium Class",
+        "class" : "Class"
       }
     },
     "news": {
@@ -64,7 +73,7 @@
   "aboutus": {
     "pageTitle": "About Us",
     "overview": {
-      "title": "NAK - \"Nur Astana Kurylys\"",
+      "title": "NAK",
       "subtitle": "a dynamically developing construction company that has established itself as a solid and reliable developer in the Kazakhstani market.",
       "stats": {
         "years": " years",
@@ -77,7 +86,7 @@
     },
     "about": {
       "title": "About Us",
-      "description": "\"Nur Astana Kurylys\" company is a multi-profile holding, whose sphere of activity includes not only housing construction, but also management of its own production base, construction of facilities in the HoReCa sector, tender projects, construction of business centers, as well as rental of commercial and office space"
+      "description": "\"NAK\" company is a multi-profile holding, whose sphere of activity includes not only housing construction, but also management of its own production base, construction of facilities in the HoReCa sector, tender projects, construction of business centers, as well as rental of commercial and office space"
     },
     "features": {
       "title": "Our Advantages",
@@ -141,7 +150,7 @@
     }
   },
   "footer": {
-    "companyDesc": "NAK \"Nur Astana Kurylys\" — Kazakhstan's leading construction company specializing in building residential complexes and commercial properties with innovative architectural solutions.",
+    "companyDesc": "NAK — Kazakhstan's leading construction company specializing in building residential complexes and commercial properties with innovative architectural solutions.",
     "resources": {
       "title": "Resources",
       "products": "Our Products",
