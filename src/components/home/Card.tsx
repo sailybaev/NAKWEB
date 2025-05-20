@@ -22,7 +22,6 @@ export function Card({
     address, 
     price, 
     date, 
-    roomrange, 
     area, 
     amount, 
     href 
@@ -58,7 +57,6 @@ export function Card({
                 <p className="text-blue-600 font-bold mb-2">{price}</p>
                 <p className="text-gray-600 text-sm mb-2">{address}</p>
                 <div className="flex justify-between text-gray-500 text-sm">
-                    <p>{roomrange}</p>
                     <p>{area}</p>
                 </div>
                 <div className="mt-3 pt-3 border-t border-gray-200 flex justify-between items-center">

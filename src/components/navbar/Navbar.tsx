@@ -40,7 +40,7 @@ function NavBarContent() {
         
         <div className="hidden md:flex md:items-center md:gap-4 md:order-2">
           <LanguageSwitcher /> 
-          <NavItemBold href="#">
+          <NavItemBold href="/contacts">
             {t('navbar.contact')}
           </NavItemBold>
         </div>

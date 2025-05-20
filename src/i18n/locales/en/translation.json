@@ -7,6 +7,21 @@
     "housing": "Housing",
     "contact": "Contact"
   },
+  "contacts": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with us. We'd love to hear from you.",
+    "info": "Contact Information",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "form": "Send us a Message",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "message": "Message",
+    "messagePlaceholder": "Your message...",
+    "send": "Send Message"
+  },
   "housing": {
     "newHousing": "New Housing",
     "secondaryMarket": "Secondary Market",
@@ -33,15 +48,15 @@
       "location": "Convenient Location",
       "locationSub": "in the city center",
       "locationDesc": "close to all infrastructure",
-      "design": "Modern Design",
-      "designSub": "European standard",
+      "design": "Modern, international design",
+      "designSub": "Functional layouts",
       "designDesc": "functional layouts",
       "quality": "Quality Construction",
       "qualitySub": "reliable materials",
       "qualityDesc": "proven developer"
     },
     "projects": {
-      "title": "NAK Projects",
+      "title": "NAK company Projects",
       "loadMore": "Load more",
       "noProjects": "No projects matching selected filters",
       "filters": {
@@ -52,6 +67,7 @@
         "apartment": "Apartment",
         "commercial": "Commercial property",
         "parking": "Parking",
+        "storage": "Storage Room",
         "price": "Price",
         "reset": "Reset",
         "inStock": "Available Now",
@@ -74,19 +90,21 @@
     "pageTitle": "About Us",
     "overview": {
       "title": "NAK",
-      "subtitle": "a dynamically developing construction company that has established itself as a solid and reliable developer in the Kazakhstani market.",
+      "subtitle": "a construction company that has established itself as a reliable developer in the Kazakh market",
       "stats": {
         "years": " years",
         "yearsSubtitle": "In the construction market",
         "volume": " million sq.m",
         "volumeSubtitle": "Volume of built housing",
         "projects": " projects",
-        "projectsSubtitle": "In the company's portfolio"
+        "projectsSubtitle": "In the company's portfolio",
+        "clients": "k",
+        "clientsSubtitle": "satisfied clients"
       }
     },
     "about": {
       "title": "About Us",
-      "description": "\"NAK\" company is a multi-profile holding, whose sphere of activity includes not only housing construction, but also management of its own production base, construction of facilities in the HoReCa sector, tender projects, construction of business centers, as well as rental of commercial and office space"
+      "description": "\"Nur Astana Kurylys\" LLP was founded in 2006 and provides services in the field of construction, residential and commercial properties, business centers, educational facilities, socially and culturally significant facilities, major and current repairs, increasing its professionalism and quality of construction every year."
     },
     "features": {
       "title": "Our Advantages",
@@ -186,7 +204,13 @@
       "title": "Location",
       "address": "Address",
       "nearbyFacilities": "Nearby Facilities",
-      "mapPlaceholder": "Map is loading..."
+      "viewOnMap": "View on Map",
+      "schools": "Schools",
+      "schoolsDesc": "Multiple schools within walking distance",
+      "shopping": "Shopping Centers",
+      "shoppingDesc": "Major shopping centers within 5 minutes drive",
+      "transport": "Public Transport",
+      "transportDesc": "Bus stops and metro stations nearby"
     },
     "apartments": {
       "title": "Apartments",
@@ -203,7 +227,7 @@
     },
     "gallery": {
       "title": "Gallery",
-      "allCategories": "All",
+      "allCategories": "All Categories",
       "categories": {
         "exterior": "Exterior",
         "interior": "Interior",
@@ -228,31 +252,53 @@
       "title": "Developer"
     },
     "contact": {
-      "title": "Contact Us",
-      "getInTouch": "Get in Touch",
-      "phone": "Phone",
-      "email": "Email",
-      "salesOffice": "Sales Office",
-      "inquiryForm": "Inquiry Form",
-      "formSuccess": "Thank you for your interest in {complex}! Our sales team will contact you shortly.",
-      "form": {
-        "name": "Your Name",
-        "phone": "Phone Number",
-        "email": "Email Address",
-        "message": "Your Message",
-        "submit": "Send Inquiry",
-        "submitting": "Sending..."
-      }
+      "title": "Contact Us"
     },
     "notFound": {
       "title": "Residential Complex Not Found",
-      "description": "The residential complex you're looking for doesn't exist or has been removed.",
+      "description": "The residential complex you are looking for does not exist or has been removed.",
       "backHome": "Back to Home"
     },
     "apartmentPlans": {
-      "title": "Apartment Floor Plans",
-      "inquire": "Request Information"
+      "title": "Apartment Plans",
+      "inquire": "Inquire Now"
+    },
+    "complex": {
+      "details": {
+        "description": "{{class}} class residential complex with {{features}}",
+        "finishType": "Finish type: {{type}}",
+        "constructionFeatures": "Construction features: {{features}}",
+        "exteriorFinish": "Exterior finish: {{materials}}",
+        "paymentOptions": "Payment Options",
+        "minPrice": "Starting from {{price}}",
+        "blocks": "Blocks",
+        "floors": "Floors",
+        "ceilingHeight": "Ceiling Height",
+        "completionDate": "Completion Date"
+      },
+      "status": {
+        "underConstruction": "Under Construction",
+        "completed": "Completed"
+      },
+      "apartment": {
+        "type": {
+          "1room": "1 Bedroom",
+          "2room": "2 Bedroom",
+          "3room": "3 Bedroom",
+          "4room": "4 Bedroom"
+        },
+        "area": "Area",
+        "price": "From {{price}}",
+        "pricePerSqm": "From {{min}} to {{max}} ₸/m²",
+        "available": "Available",
+        "notAvailable": "Not Available"
+      },
+      "class": {
+        "comfort": "Comfort",
+        "comfort+": "Comfort+",
+        "business": "Business",
+        "premium": "Premium"
+      }
     }
-    
   }
 }

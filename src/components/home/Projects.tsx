@@ -21,6 +21,23 @@ const FILTER_KEYS = {
   PREMIUM: 'premium'
 };
 
+const styles = `
+@keyframes gradient-x {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
+}
+`;
+
+const styleSheet = document.createElement("style");
+styleSheet.innerText = styles;
+document.head.appendChild(styleSheet);
+
 export function Projects() {
     const { t } = useTranslation();
     const [buildingTypeKey, setBuildingTypeKey] = useState(FILTER_KEYS.ALL_PROJECTS);
@@ -188,7 +205,7 @@ export function Projects() {
           case FILTER_KEYS.BUSINESS:
             return 'bg-purple-600'; 
           case FILTER_KEYS.PREMIUM:
-            return 'bg-amber-600'; 
+            return 'bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-500 animate-gradient-x'; 
           default:
             return 'bg-gray-600';  
         }

@@ -50,16 +50,18 @@ export function FilterBar({
     t('home.projects.filters.all'),
     t('home.projects.filters.apartment'), 
     t('home.projects.filters.commercial'), 
-    t('home.projects.filters.parking')
+    t('home.projects.filters.parking'),
+    t('home.projects.filters.storage')
   ];
 
   const classTypes = [
     t('home.projects.filters.allClasses'),
     t('home.projects.filters.economy'), 
-    t('home.projects.filters.comfort'), 
+    t('home.projects.filters.comfort'),
+    t('home.projects.filters.comfortPlus'), 
     t('home.projects.filters.business'),
     t('home.projects.filters.premium'),
-    t('home.projects.filters.comfortPlus'),
+    
   ];
 
   const closeAllDropdowns = (except: string) => {

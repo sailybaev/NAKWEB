@@ -39,7 +39,21 @@ export function Footer() {
                         </Typography>
                         <Stack direction="row" alignItems="center" spacing={1}>
                             <PhoneIcon fontSize="small" sx={{ color: '#3B82F6' }} />
-                            <Typography variant="body2">+7 777 777 77 77</Typography>
+                            <Typography variant="body2">+7 706 699 95 00</Typography>
+                        </Stack>
+                        <Stack direction="row" alignItems="center" spacing={1} sx={{ mt: 1 }}>
+                            <AlternateEmailIcon fontSize="small" sx={{ color: '#3B82F6' }} />
+                            <Typography variant="body2">info@nak.kz</Typography>
+                        </Stack>
+                        <Stack direction="row" alignItems="center" spacing={1} sx={{ mt: 1 }}>
+                            <Typography variant="body2" color="rgba(255,255,255,0.7)">
+                                Проспект Мангилик Ел, 38
+                            </Typography>
+                        </Stack>
+                        <Stack direction="row" alignItems="center" spacing={1} sx={{ mt: 0.5 }}>
+                            <Typography variant="body2" color="rgba(255,255,255,0.7)">
+                                Улица Арай, 29а
+                            </Typography>
                         </Stack>
                     </Box>
 
@@ -56,7 +70,6 @@ export function Footer() {
                             <Stack spacing={1.5}>
                                 <Link href="#" underline="hover" color="rgba(255,255,255,0.7)">{t('footer.resources.products')}</Link>
                                 <Link href="#" underline="hover" color="rgba(255,255,255,0.7)">{t('footer.resources.experience')}</Link>
-                                <Link href="#" underline="hover" color="rgba(255,255,255,0.7)">{t('footer.resources.strategy')}</Link>
                             </Stack>
                         </Box>
 
@@ -67,8 +80,6 @@ export function Footer() {
                             <Stack spacing={1.5}>
                                 <Link href="/about" underline="hover" color="rgba(255,255,255,0.7)">{t('footer.company.about')}</Link>
                                 <Link href="#" underline="hover" color="rgba(255,255,255,0.7)">{t('footer.company.contact')}</Link>
-                                <Link href="#" underline="hover" color="rgba(255,255,255,0.7)">{t('footer.company.success')}</Link>
-                                <Link href="#" underline="hover" color="rgba(255,255,255,0.7)">{t('footer.company.privacy')}</Link>
                             </Stack>
                         </Box>
 
@@ -77,10 +88,11 @@ export function Footer() {
                                 {t('footer.links.title')}
                             </Typography>
                             <Stack spacing={1.5}>
-                                <Link href="#" underline="hover" color="rgba(255,255,255,0.7)">{t('footer.links.premium')}</Link>
-                                <Link href="#" underline="hover" color="rgba(255,255,255,0.7)">{t('footer.links.services')}</Link>
-                                <Link href="#" underline="hover" color="rgba(255,255,255,0.7)">{t('footer.links.team')}</Link>
-                                <Link href="#" underline="hover" color="rgba(255,255,255,0.7)">{t('footer.links.app')}</Link>
+                                <Link href="/" underline="hover" color="rgba(255,255,255,0.7)">{t('navbar.home')}</Link>
+                                <Link href="/commerce" underline="hover" color="rgba(255,255,255,0.7)">{t('navbar.commerce')}</Link>
+                                <Link href="/about" underline="hover" color="rgba(255,255,255,0.7)">{t('navbar.about')}</Link>
+                                <Link href="/campaigns" underline="hover" color="rgba(255,255,255,0.7)">{t('navbar.campaigns')}</Link>
+                                <Link href="#" underline="hover" color="rgba(255,255,255,0.7)">{t('navbar.housing')}</Link>
                             </Stack>
                         </Box>
                     </Stack>

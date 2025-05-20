@@ -65,15 +65,19 @@ export function ContactSection({ complex }: ContactSectionProps) {
             </div>
             <div>
               <p className="text-blue-200 text-sm font-medium mb-2">Телефон</p>
-              <a href={`tel:${'+7 777 777 77 77'}`} className="block hover:underline">
-                {'+7 777 777 77 77'}
+              <a href="tel:+77066999500" className="block hover:underline">
+                +7 706 699 95 00
               </a>
             </div>
             <div>
               <p className="text-blue-200 text-sm font-medium mb-2">E-mail</p>
-              <a href={`mailto:${'info@example.com'}`} className="block hover:underline">
-                {'info@example.com'}
+              <a href="mailto:info@nak.kz" className="block hover:underline">
+                info@nak.kz
               </a>
+            </div>
+            <div>
+              <p className="text-blue-200 text-sm font-medium mb-2">Адреса офисов</p>
+              <p>Проспект Мангилик Ел, 38<br />Улица Арай, 29а</p>
             </div>
             <div>
               <p className="text-blue-200 text-sm font-medium mb-2">Время работы</p>

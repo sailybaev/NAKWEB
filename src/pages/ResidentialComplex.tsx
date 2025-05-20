@@ -54,7 +54,7 @@ export function ResidentialComplex() {
             
             <section id="apartment-plans" className="py-20 px-4 bg-white">
                 <div className="container mx-auto">
-                    <ApartmentSlider apartments={complex.apartments} />
+                    <ApartmentSlider complex={complex} />
                 </div>
             </section>
             
@@ -62,7 +62,7 @@ export function ResidentialComplex() {
 
             <section id="contact" className="py-20 bg-gray-50">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Связаться с нами</h2>
+                    <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">{t('residential.contact.title')}</h2>
                     <div className="max-w-5xl mx-auto">
                         <ContactSection complex={complex} />
                     </div>

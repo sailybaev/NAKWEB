@@ -1,33 +1,50 @@
 import { useTranslation } from 'react-i18next';
+import { ResidentialComplex } from './residentialConfig';
 
 interface AmenitiesSectionProps {
-    amenities: string[];
+    complex: ResidentialComplex;
 }
 
-export function AmenitiesSection({ amenities }: AmenitiesSectionProps) {
+export function AmenitiesSection({ complex }: AmenitiesSectionProps) {
     const { t } = useTranslation();
-    
+
     return (
-        <section id="amenities" className="p-16 bg-white">
+        <section id="amenities" className="py-16 bg-gray-50">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-center mb-12">
                     {t('residential.amenities.title')}
                 </h2>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    {amenities.map((amenity, index) => (
-                        <div 
-                            key={index} 
-                            className="bg-gray-50 rounded-lg p-4 flex items-start"
-                        >
-                            <div className="mr-3 mt-1 text-blue-600">
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                                </svg>
-                            </div>
-                            <span className="text-gray-800">{amenity}</span>
-                        </div>
-                    ))}
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                        <h3 className="text-xl font-semibold mb-4">{t('residential.amenities.elevator')}</h3>
+                        <p className="text-gray-600">{complex.elevator}</p>
+                    </div>
+
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                        <h3 className="text-xl font-semibold mb-4">{t('residential.amenities.windows')}</h3>
+                        <p className="text-gray-600">{complex.windows}</p>
+                    </div>
+
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                        <h3 className="text-xl font-semibold mb-4">{t('residential.amenities.heating')}</h3>
+                        <p className="text-gray-600">{complex.heating}</p>
+                    </div>
+
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                        <h3 className="text-xl font-semibold mb-4">{t('residential.amenities.construction')}</h3>
+                        <p className="text-gray-600">{complex.constructionFeatures}</p>
+                    </div>
+
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                        <h3 className="text-xl font-semibold mb-4">{t('residential.amenities.exterior')}</h3>
+                        <p className="text-gray-600">{complex.exteriorFinish}</p>
+                    </div>
+
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                        <h3 className="text-xl font-semibold mb-4">{t('residential.amenities.finish')}</h3>
+                        <p className="text-gray-600">{complex.finishType}</p>
+                    </div>
                 </div>
             </div>
         </section>
