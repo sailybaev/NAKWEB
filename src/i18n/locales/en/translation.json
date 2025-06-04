@@ -307,5 +307,14 @@
         "premium": "Premium"
       }
     }
+  },
+  "ansauForm": {
+    "title": "Submit Application",
+    "subtitle": "Fill out the form and we will contact you shortly",
+    "name": "Your Name",
+    "namePlaceholder": "Enter your name",
+    "phone": "Phone Number",
+    "phonePlaceholder": "Enter your phone number",
+    "submit": "Submit Application"
   }
 }
