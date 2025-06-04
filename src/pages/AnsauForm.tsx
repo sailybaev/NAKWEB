@@ -93,7 +93,7 @@ export function AnsauForm() {
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Information */}
             <motion.div 
-              className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
+              className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 order-2 md:order-1"
               {...fadeInUp}
             >
               <h2 className="text-2xl font-bold mb-8 text-gray-800 dark:text-white">
@@ -145,7 +145,7 @@ export function AnsauForm() {
 
             {/* Contact Form */}
             <motion.div 
-              className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
+              className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 order-1 md:order-2"
               {...fadeInUp}
             >
               <h2 className="text-2xl font-bold mb-8 text-gray-800 dark:text-white">
