@@ -1,17 +1,15 @@
-import {MainLayout} from "../layouts/MainLayout";
-import { Overview } from "../components/aboutus/Overview";
-import { About } from "../components/aboutus/About";
-import { Cards } from "../components/aboutus/Cards";
-import { Features } from "../components/aboutus/Features";
-import { Person } from "../components/aboutus/Person";
+import { About } from '../components/aboutus/About'
+import { Features } from '../components/aboutus/Features'
+import { Overview } from '../components/aboutus/Overview'
+import { MainLayout } from '../layouts/MainLayout'
 export function Aboutus() {
-    return(
-        <MainLayout>
-            <Overview />
-            <About />
-            <Cards />
-            <Features />
-            <Person />
-        </MainLayout>
-    )
+	return (
+		<MainLayout>
+			<Overview />
+			<About />
+			{/* <Cards /> */}
+			<Features />
+			{/* <Person /> */}
+		</MainLayout>
+	)
 }
